@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Welcome to Grails</title>
+    <title>Send Mail as Document</title>
 </head>
 
 <body>
@@ -10,13 +10,9 @@
     <div class="tp-banner-container">
         <div class="tp-banner">
             <ul>
-                <!-- SLIDE  -->
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
-                    <!-- MAIN IMAGE -->
                     <asset:image src="transparent.png" alt="slidebg1" data-bgfit="cover" data-bgposition="left top"
                                  data-bgrepeat="no-repeat"/>
-                    <!-- LAYERS -->
-                    <!-- LAYER NR. 1 -->
                     <div class="tp-caption lfl fadeout hidden-xs"
                          data-x="left"
                          data-y="bottom"
@@ -25,7 +21,7 @@
                          data-speed="500"
                          data-start="700"
                          data-easing="Power4.easeOut">
-                        <asset:image src="eco/Slides/hand-eco.png" alt=""/>
+                        <asset:image src="mtp/Slides/hand-eco.png" alt=""/>
                     </div>
 
                     <div class="tp-caption lfl fadeout visible-xs"
@@ -36,22 +32,22 @@
                          data-speed="500"
                          data-start="700"
                          data-easing="Power4.easeOut">
-                        <asset:image src="eco/iphone-eco.png" alt=""/>
+                        <asset:image src="mtp/iphone-eco.png" alt=""/>
                     </div>
 
                     <div class="tp-caption large_white_bold sft" data-x="550" data-y="center" data-hoffset="0"
                          data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
-                        Oleose
+                        MailToPost
                     </div>
 
-                    <div class="tp-caption large_white_light sfr" data-x="770" data-y="center" data-hoffset="0"
+                    <div class="tp-caption large_white_light sfr" data-x="900" data-y="center" data-hoffset="0"
                          data-voffset="-80" data-speed="500" data-start="1400" data-easing="Power4.easeOut">
                         App
                     </div>
 
                     <div class="tp-caption large_white_light sfb" data-x="550" data-y="center" data-hoffset="0"
                          data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
-                        Landing Theme
+                        Send Mail as Document
                     </div>
 
                     <div class="tp-caption sfb hidden-xs" data-x="550" data-y="center" data-hoffset="0"
@@ -82,7 +78,7 @@
                          data-speed="1000"
                          data-start="700"
                          data-easing="Power4.easeOut">
-                        <asset:image src="eco/Slides/eco-slide2.png" alt=""/>
+                        <asset:image src="mtp/Slides/eco-slide2.png" alt=""/>
                     </div>
 
 
@@ -110,7 +106,7 @@
                          data-speed="1000"
                          data-start="700"
                          data-easing="Power4.easeOut">
-                        <asset:image src="eco/Slides/family-eco.png" alt=""/>
+                        <asset:image src="mtp/Slides/family-eco.png" alt=""/>
                     </div>
 
                     <div class="tp-caption customin customout visible-xs"
@@ -123,7 +119,7 @@
                          data-speed="1000"
                          data-start="700"
                          data-easing="Power4.easeOut">
-                        <asset:image src="eco/Slides/family-eco.png" alt=""/>
+                        <asset:image src="mtp/Slides/family-eco.png" alt=""/>
                     </div>
 
                     <div class="tp-caption lfb visible-xs" data-x="center" data-y="center" data-hoffset="0"
@@ -140,7 +136,7 @@
                     <div class="tp-caption mediumlarge_light_white sft hidden-xs" data-x="left" data-y="center"
                          data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1200"
                          data-easing="Power4.easeOut">
-                        App Landing Page
+                        Landing Page
                     </div>
 
                     <div class="tp-caption small_light_white sfb hidden-xs" data-x="left" data-y="center"
@@ -172,7 +168,7 @@
 
                 <div class="divider"></div>
 
-                <p>Oleose Beautiful App Landing Page</p>
+                <p>MailToPost...</p>
             </div>
 
             <div class="row">
@@ -288,7 +284,7 @@
                 </div>
 
                 <div class="col-md-4 col-sm-4">
-                    <asset:image src="eco/iphone-eco.png" class="img-responsive scrollpoint sp-effect5" alt=""/>
+                    <asset:image src="mtp/iphone-eco.png" class="img-responsive scrollpoint sp-effect5" alt=""/>
                 </div>
 
                 <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
@@ -368,14 +364,14 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <div class="review-person">
-                                        <img src="http://api.randomuser.me/portraits/women/94.jpg" alt=""
+                                        <img src="" alt=""
                                              class="img-responsive">
                                     </div>
                                 </div>
 
                                 <div class="col-md-10">
                                     <div class="review-comment">
-                                        <h3>“I love Oleose, I highly recommend it, Everyone Try It Now”</h3>
+                                        <h3>“I love MailToPost, I highly recommend it, Everyone Try It Now”</h3>
 
                                         <p>
                                             - Krin Fox
@@ -396,7 +392,7 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <div class="review-person">
-                                        <img src="http://api.randomuser.me/portraits/men/70.jpg" alt=""
+                                        <img src="" alt=""
                                              class="img-responsive">
                                     </div>
                                 </div>
@@ -424,7 +420,7 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <div class="review-person">
-                                        <img src="http://api.randomuser.me/portraits/men/93.jpg" alt=""
+                                        <img src="" alt=""
                                              class="img-responsive">
                                     </div>
                                 </div>
@@ -473,32 +469,32 @@
 
             <div class="slider filtering scrollpoint sp-effect5">
                 <div class="one">
-                    <asset:image src="eco/screens/profile.jpg" alt=""/>
+                    <asset:image src="mtp/screens/profile.jpg" alt=""/>
                     <h4>Profile Page</h4>
                 </div>
 
                 <div class="two">
-                    <asset:image src="eco/screens/menu.jpg" alt=""/>
+                    <asset:image src="mtp/screens/menu.jpg" alt=""/>
                     <h4>Toggel Menu</h4>
                 </div>
 
                 <div class="three">
-                    <asset:image src="eco/screens/weather.jpg" alt=""/>
+                    <asset:image src="mtp/screens/weather.jpg" alt=""/>
                     <h4>Weather Forcast</h4>
                 </div>
 
                 <div class="one">
-                    <asset:image src="eco/screens/signup.jpg" alt=""/>
+                    <asset:image src="mtp/screens/signup.jpg" alt=""/>
                     <h4>Sign Up</h4>
                 </div>
 
                 <div class="one">
-                    <asset:image src="eco/screens/calendar.jpg" alt=""/>
+                    <asset:image src="mtp/screens/calendar.jpg" alt=""/>
                     <h4>Event Calendar</h4>
                 </div>
 
                 <div class="two">
-                    <asset:image src="eco/screens/options.jpg" alt=""/>
+                    <asset:image src="mtp/screens/options.jpg" alt=""/>
                     <h4>Some Options</h4>
                 </div>
 
@@ -614,7 +610,7 @@
 
                                 <div class="media-body">
                                     <h4 class="media-heading">
-                                        <a href="mailto:support@oleose.com">support@oleose.com</a>
+                                        <a href="mailto:vijay@nexthoughts.com">vijay@nexthoughts.com</a>
                                     </h4>
                                 </div>
                             </div>

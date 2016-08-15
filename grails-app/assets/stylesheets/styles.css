@@ -1011,7 +1011,7 @@ section#features .media.active .media-heading {
 }
 
 section#reviews {
-    background: url("../images/eco/bk-eco.jpg");
+    background: url("../images/mtp/bk-eco.jpg");
 }
 
 section#reviews header {
@@ -1099,7 +1099,7 @@ section#demo header h1:after {
 
 /* Get app Section */
 section#getApp {
-    background: url("../images/eco/bk-eco-ga.jpg");
+    background: url("../images/mtp/bk-eco-ga.jpg");
 }
 
 section#getApp header {

@@ -82,7 +82,7 @@
 <body>
 <div class="pre-loader">
     <div class="load-con">
-        <asset:image src="eco/logo.png" alt="" class="animated fadeInDown"/>
+        <asset:image src="mtp/logo.png" alt="" class="animated fadeInDown"/>
         <div class="spinner">
             <div class="bounce1"></div>
 
@@ -104,7 +104,7 @@
                     <span class="fa fa-bars fa-lg"></span>
                 </button>
                 <a class="navbar-brand" href="${createLink(uri: '/')}">
-                    <asset:image src="eco/logo.png" alt="" class="logo"/>
+                    <asset:image src="mtp/logo.png" alt="" class="logo"/>
                 </a>
             </div>
 
@@ -137,7 +137,7 @@
 <footer>
     <div class="container">
         <a href="${createLink(uri: '/')}#" class="scrollpoint sp-effect3">
-            <asset:image src="eco/logo.png" alt="" class="logo"/>
+            <asset:image src="mtp/logo.png" alt="" class="logo"/>
         </a>
 
         <div class="social">
@@ -149,7 +149,7 @@
         <div class="rights">
             <p>Copyright &copy; 2014</p>
 
-            <p>Template by <a href="http://www.scoopthemes.com" target="_blank">ScoopThemes</a></p>
+            <p>Template by <a href="#" target="_blank">ScoopThemes</a></p>
         </div>
     </div>
 </footer>
