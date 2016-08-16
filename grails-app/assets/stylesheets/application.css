@@ -9,10 +9,11 @@
 *
 *= require bootstrap.min.css
 *= require animate.css
-*= require font-awesome.min.css
-*= require slick.css
-*= require rs-plugin/css/settings.css
-*= require styles.css
-*= require styles.css
+*= require font-awesome.css
+*= require style.default.css
+*= require custom.css
+*= require owl.carousel.css
+*= require owl.theme.css
+*= require animate.css
 *= require_self
 */

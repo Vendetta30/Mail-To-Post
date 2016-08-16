@@ -6,630 +6,450 @@
 </head>
 
 <body>
-<header>
-    <div class="tp-banner-container">
-        <div class="tp-banner">
-            <ul>
-                <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
-                    <asset:image src="transparent.png" alt="slidebg1" data-bgfit="cover" data-bgposition="left top"
-                                 data-bgrepeat="no-repeat"/>
-                    <div class="tp-caption lfl fadeout hidden-xs"
-                         data-x="left"
-                         data-y="bottom"
-                         data-hoffset="30"
-                         data-voffset="0"
-                         data-speed="500"
-                         data-start="700"
-                         data-easing="Power4.easeOut">
-                        <asset:image src="mtp/Slides/hand-eco.png" alt=""/>
+<div id="intro" class="clearfix">
+    <div class="item">
+        <div class="container">
+            <div class="row">
+                <div class="carousel-caption">
+                    <div data-animate="fadeInDown" class="logo">
+                        <asset:image src="logo-big.png" alt="logo" width="130"/>
                     </div>
 
-                    <div class="tp-caption lfl fadeout visible-xs"
-                         data-x="left"
-                         data-y="center"
-                         data-hoffset="700"
-                         data-voffset="0"
-                         data-speed="500"
-                         data-start="700"
-                         data-easing="Power4.easeOut">
-                        <asset:image src="mtp/iphone-eco.png" alt=""/>
-                    </div>
+                    <h1 data-animate="fadeInDown">Hello, hola, नमस्ते !</h1>
 
-                    <div class="tp-caption large_white_bold sft" data-x="550" data-y="center" data-hoffset="0"
-                         data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
-                        MailToPost
-                    </div>
-
-                    <div class="tp-caption large_white_light sfr" data-x="900" data-y="center" data-hoffset="0"
-                         data-voffset="-80" data-speed="500" data-start="1400" data-easing="Power4.easeOut">
-                        App
-                    </div>
-
-                    <div class="tp-caption large_white_light sfb" data-x="550" data-y="center" data-hoffset="0"
-                         data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
-                        Send Mail as Document
-                    </div>
-
-                    <div class="tp-caption sfb hidden-xs" data-x="550" data-y="center" data-hoffset="0"
-                         data-voffset="85"
-                         data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
-                        <a href="${createLink(uri: '/')}#about" class="btn btn-primary inverse btn-lg">LEARN MORE</a>
-                    </div>
-
-                    <div class="tp-caption sfr hidden-xs" data-x="730" data-y="center" data-hoffset="0"
-                         data-voffset="85"
-                         data-speed="1500" data-start="1900" data-easing="Power4.easeOut">
-                        <a href="${createLink(uri: '/')}#getApp" class="btn btn-default btn-lg">GET APP</a>
-                    </div>
-
-                </li>
-                <!-- SLIDE 2 -->
-                <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000">
-                    <!-- MAIN IMAGE -->
-                    <asset:image src="transparent.png" alt="slidebg1" data-bgfit="cover" data-bgposition="left top"
-                                 data-bgrepeat="no-repeat"/>
-                    <!-- LAYERS -->
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption lfb fadeout hidden-xs"
-                         data-x="center"
-                         data-y="bottom"
-                         data-hoffset="0"
-                         data-voffset="0"
-                         data-speed="1000"
-                         data-start="700"
-                         data-easing="Power4.easeOut">
-                        <asset:image src="mtp/Slides/eco-slide2.png" alt=""/>
-                    </div>
-
-
-                    <div class="tp-caption large_white_light sft" data-x="center" data-y="250" data-hoffset="0"
-                         data-voffset="0" data-speed="1000" data-start="1400" data-easing="Power4.easeOut">
-                        Every Pixel <i class="fa fa-heart"></i>
-                    </div>
-
-                </li>
-
-                <!-- SLIDE 3 -->
-                <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000">
-                    <!-- MAIN IMAGE -->
-                    <asset:image src="transparent.png" alt="slidebg1" data-bgfit="cover" data-bgposition="left top"
-                                 data-bgrepeat="no-repeat"/>
-                    <!-- LAYERS -->
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption customin customout hidden-xs"
-                         data-x="right"
-                         data-y="center"
-                         data-hoffset="0"
-                         data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-voffset="50"
-                         data-speed="1000"
-                         data-start="700"
-                         data-easing="Power4.easeOut">
-                        <asset:image src="mtp/Slides/family-eco.png" alt=""/>
-                    </div>
-
-                    <div class="tp-caption customin customout visible-xs"
-                         data-x="center"
-                         data-y="center"
-                         data-hoffset="0"
-                         data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-voffset="0"
-                         data-speed="1000"
-                         data-start="700"
-                         data-easing="Power4.easeOut">
-                        <asset:image src="mtp/Slides/family-eco.png" alt=""/>
-                    </div>
-
-                    <div class="tp-caption lfb visible-xs" data-x="center" data-y="center" data-hoffset="0"
-                         data-voffset="400" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
-                    </div>
-
-
-                    <div class="tp-caption mediumlarge_light_white sfl hidden-xs" data-x="left" data-y="center"
-                         data-hoffset="0" data-voffset="-50" data-speed="1000" data-start="1000"
-                         data-easing="Power4.easeOut">
-                        Powerful Responsive
-                    </div>
-
-                    <div class="tp-caption mediumlarge_light_white sft hidden-xs" data-x="left" data-y="center"
-                         data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1200"
-                         data-easing="Power4.easeOut">
-                        Landing Page
-                    </div>
-
-                    <div class="tp-caption small_light_white sfb hidden-xs" data-x="left" data-y="center"
-                         data-hoffset="0"
-                         data-voffset="80" data-speed="1000" data-start="1600" data-easing="Power4.easeOut">
-                        <p>Nulla pretium libero interdum, tempus lorem non, rutrum diam. <br> Quisque pellentesque diam sed pulvinar lobortis. Vestibulum ante <br>ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-                        </p>
-                    </div>
-
-                    <div class="tp-caption lfl hidden-xs" data-x="left" data-y="center" data-hoffset="0"
-                         data-voffset="160"
-                         data-speed="1000" data-start="1800" data-easing="Power4.easeOut">
-                    </div>
-
-                </li>
-
-            </ul>
+                    <h2 data-animate="slideInUp">I grind HTML and CSS and then weld them with PHP into beautiful and efficient websites.</h2>
+                </div>
+            </div>
         </div>
     </div>
-</header>
-
-<div class="wrapper">
-
-    <section id="about">
-        <div class="container">
-
-            <div class="section-heading scrollpoint sp-effect3">
-                <h1>About Us</h1>
-
-                <div class="divider"></div>
-
-                <p>MailToPost...</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="about-item scrollpoint sp-effect2">
-                        <i class="fa fa-download fa-2x"></i>
-
-                        <h3>Easy setup</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="about-item scrollpoint sp-effect5">
-                        <i class="fa fa-mobile fa-2x"></i>
-
-                        <h3>On-the-go</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="about-item scrollpoint sp-effect5">
-                        <i class="fa fa-users fa-2x"></i>
-
-                        <h3>Social connect</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="about-item scrollpoint sp-effect1">
-                        <i class="fa fa-sliders fa-2x"></i>
-
-                        <h3>Dedicated support</h3>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features">
-        <div class="container">
-            <div class="section-heading scrollpoint sp-effect3">
-                <h1>Features</h1>
-
-                <div class="divider"></div>
-
-                <p>Learn more about this feature packed App</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
-                    <div class="media text-right feature">
-                        <a class="pull-right" href="${createLink(uri: '/')}#">
-                            <i class="fa fa-cogs fa-2x"></i>
-                        </a>
-
-                        <div class="media-body">
-                            <h3 class="media-heading">User Settings</h3>
-                            Lorem ipsum dolor sit amet.
-                        </div>
-                    </div>
-
-                    <div class="media text-right feature">
-                        <a class="pull-right" href="${createLink(uri: '/')}#">
-                            <i class="fa fa-envelope fa-2x"></i>
-                        </a>
-
-                        <div class="media-body">
-                            <h3 class="media-heading">Messages Inbox</h3>
-                            Lorem ipsum dolor sit amet.
-                        </div>
-                    </div>
-
-                    <div class="media text-right feature">
-                        <a class="pull-right" href="${createLink(uri: '/')}#">
-                            <i class="fa fa-users fa-2x"></i>
-                        </a>
-
-                        <div class="media-body">
-                            <h3 class="media-heading">Friends List</h3>
-                            Lorem ipsum dolor sit amet.
-                        </div>
-                    </div>
-
-                    <div class="media text-right feature">
-                        <a class="pull-right" href="${createLink(uri: '/')}#">
-                            <i class="fa fa-comments fa-2x"></i>
-                        </a>
-
-                        <div class="media-body">
-                            <h3 class="media-heading">Live Chat Messages</h3>
-                            Lorem ipsum dolor sit amet.
-                        </div>
-                    </div>
-
-                    <div class="media text-right feature">
-                        <a class="pull-right" href="${createLink(uri: '/')}#">
-                            <i class="fa fa-calendar fa-2x"></i>
-                        </a>
-
-                        <div class="media-body">
-                            <h3 class="media-heading">Calendar / Planner</h3>
-                            Lorem ipsum dolor sit amet.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-4">
-                    <asset:image src="mtp/iphone-eco.png" class="img-responsive scrollpoint sp-effect5" alt=""/>
-                </div>
-
-                <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
-                    <div class="media feature">
-                        <a class="pull-left" href="${createLink(uri: '/')}#">
-                            <i class="fa fa-map-marker fa-2x"></i>
-                        </a>
-
-                        <div class="media-body">
-                            <h3 class="media-heading">My Places</h3>
-                            Lorem ipsum dolor sit amet.
-                        </div>
-                    </div>
-
-                    <div class="media feature">
-                        <a class="pull-left" href="${createLink(uri: '/')}#">
-                            <i class="fa fa-film fa-2x"></i>
-                        </a>
-
-                        <div class="media-body">
-                            <h3 class="media-heading">Media Player™</h3>
-                            Lorem ipsum dolor sit amet.
-                        </div>
-                    </div>
-
-                    <div class="media feature">
-                        <a class="pull-left" href="${createLink(uri: '/')}#">
-                            <i class="fa fa-compass fa-2x"></i>
-                        </a>
-
-                        <div class="media-body">
-                            <h3 class="media-heading">Intuitive Statistics</h3>
-                            Lorem ipsum dolor sit amet.
-                        </div>
-                    </div>
-
-                    <div class="media feature">
-                        <a class="pull-left" href="${createLink(uri: '/')}#">
-                            <i class="fa fa-picture-o fa-2x"></i>
-                        </a>
-
-                        <div class="media-body">
-                            <h3 class="media-heading">Weather on-the-go</h3>
-                            Lorem ipsum dolor sit amet.
-                        </div>
-                    </div>
-
-                    <div class="media active feature">
-                        <a class="pull-left" href="${createLink(uri: '/')}#">
-                            <i class="fa fa-plus fa-2x"></i>
-                        </a>
-
-                        <div class="media-body">
-                            <h3 class="media-heading">And much more!</h3>
-                            Lorem ipsum dolor sit amet.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews">
-        <div class="container">
-            <div class="section-heading inverse scrollpoint sp-effect3">
-                <h1>Reviews</h1>
-
-                <div class="divider"></div>
-
-                <p>Read What's The People Are Saying About Us</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-10 col-md-push-1 scrollpoint sp-effect3">
-                    <div class="review-filtering">
-                        <div class="review">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <div class="review-person">
-                                        <img src="" alt=""
-                                             class="img-responsive">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-10">
-                                    <div class="review-comment">
-                                        <h3>“I love MailToPost, I highly recommend it, Everyone Try It Now”</h3>
-
-                                        <p>
-                                            - Krin Fox
-                                            <span>
-                                                <i class="fa fa-star fa-lg"></i>
-                                                <i class="fa fa-star fa-lg"></i>
-                                                <i class="fa fa-star fa-lg"></i>
-                                                <i class="fa fa-star fa-lg"></i>
-                                                <i class="fa fa-star-o fa-lg"></i>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="review rollitin">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <div class="review-person">
-                                        <img src="" alt=""
-                                             class="img-responsive">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-10">
-                                    <div class="review-comment">
-                                        <h3>“Oleaose Is The Best Stable, Fast App I Have Ever Experienced”</h3>
-
-                                        <p>
-                                            - Theodore Willis
-                                            <span>
-                                                <i class="fa fa-star fa-lg"></i>
-                                                <i class="fa fa-star fa-lg"></i>
-                                                <i class="fa fa-star fa-lg"></i>
-                                                <i class="fa fa-star-half-o fa-lg"></i>
-                                                <i class="fa fa-star-o fa-lg"></i>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="review rollitin">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <div class="review-person">
-                                        <img src="" alt=""
-                                             class="img-responsive">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-10">
-                                    <div class="review-comment">
-                                        <h3>“Keep It Up Guys Your Work Rules, Cheers :)”</h3>
-
-                                        <p>
-                                            - Ricky Grant
-                                            <span>
-                                                <i class="fa fa-star fa-lg"></i>
-                                                <i class="fa fa-star fa-lg"></i>
-                                                <i class="fa fa-star fa-lg"></i>
-                                                <i class="fa fa-star-half-o fa-lg"></i>
-                                                <i class="fa fa-star-o fa-lg"></i>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="screens">
-        <div class="container">
-
-            <div class="section-heading scrollpoint sp-effect3">
-                <h1>Screens</h1>
-
-                <div class="divider"></div>
-
-                <p>See what’s included in the App</p>
-            </div>
-
-            <div class="filter scrollpoint sp-effect3">
-                <a href="javascript:void(0)" class="button js-filter-all active">All Screens</a>
-                <a href="javascript:void(0)" class="button js-filter-one">User Access</a>
-                <a href="javascript:void(0)" class="button js-filter-two">Social Network</a>
-                <a href="javascript:void(0)" class="button js-filter-three">Media Players</a>
-            </div>
-
-            <div class="slider filtering scrollpoint sp-effect5">
-                <div class="one">
-                    <asset:image src="mtp/screens/profile.jpg" alt=""/>
-                    <h4>Profile Page</h4>
-                </div>
-
-                <div class="two">
-                    <asset:image src="mtp/screens/menu.jpg" alt=""/>
-                    <h4>Toggel Menu</h4>
-                </div>
-
-                <div class="three">
-                    <asset:image src="mtp/screens/weather.jpg" alt=""/>
-                    <h4>Weather Forcast</h4>
-                </div>
-
-                <div class="one">
-                    <asset:image src="mtp/screens/signup.jpg" alt=""/>
-                    <h4>Sign Up</h4>
-                </div>
-
-                <div class="one">
-                    <asset:image src="mtp/screens/calendar.jpg" alt=""/>
-                    <h4>Event Calendar</h4>
-                </div>
-
-                <div class="two">
-                    <asset:image src="mtp/screens/options.jpg" alt=""/>
-                    <h4>Some Options</h4>
-                </div>
-
-                <div class="three">
-
-                    <h4>Sales Analysis</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="demo">
-        <div class="container">
-            <div class="section-heading scrollpoint sp-effect3">
-                <h1>Demo</h1>
-
-                <div class="divider"></div>
-
-                <p>Take a closer look in more detail</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 scrollpoint sp-effect2">
-                    <div class="video-container">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="getApp">
-        <div class="container-fluid">
-            <div class="section-heading inverse scrollpoint sp-effect3">
-                <h1>Get App</h1>
-
-                <div class="divider"></div>
-
-                <p>Choose your native platform and get started!</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="hanging-phone scrollpoint sp-effect2 hidden-xs">
-                    </div>
-
-                    <div class="platforms">
-                        <a href="${createLink(uri: '/')}#" class="btn btn-primary inverse scrollpoint sp-effect1">
-                            <i class="fa fa-android fa-3x pull-left"></i>
-                            <span>Download for</span><br>
-                            <b>Android</b>
-                        </a>
-
-                        <a href="${createLink(uri: '/')}#" class="btn btn-primary inverse scrollpoint sp-effect2">
-                            <i class="fa fa-apple fa-3x pull-left"></i>
-                            <span>Download for</span><br>
-                            <b>Apple IOS</b>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="support" class="doublediagonal">
-        <div class="container">
-            <div class="section-heading scrollpoint sp-effect3">
-                <h1>Support</h1>
-
-                <div class="divider"></div>
-
-                <p>For more info and support, contact us!</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-8 col-sm-8 scrollpoint sp-effect1">
-                            <form role="form">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your name">
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your email">
-                                </div>
-
-                                <div class="form-group">
-                                    <textarea cols="30" rows="10" class="form-control"
-                                              placeholder="Your message"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                            </form>
-                        </div>
-
-                        <div class="col-md-4 col-sm-4 contact-details scrollpoint sp-effect2">
-                            <div class="media">
-                                <a class="pull-left" href="${createLink(uri: '/')}#">
-                                    <i class="fa fa-map-marker fa-2x"></i>
-                                </a>
-
-                                <div class="media-body">
-                                    <h4 class="media-heading">4, Some street, California, USA</h4>
-                                </div>
-                            </div>
-
-                            <div class="media">
-                                <a class="pull-left" href="${createLink(uri: '/')}#">
-                                    <i class="fa fa-envelope fa-2x"></i>
-                                </a>
-
-                                <div class="media-body">
-                                    <h4 class="media-heading">
-                                        <a href="mailto:vijay@nexthoughts.com">vijay@nexthoughts.com</a>
-                                    </h4>
-                                </div>
-                            </div>
-
-                            <div class="media">
-                                <a class="pull-left" href="${createLink(uri: '/')}#">
-                                    <i class="fa fa-phone fa-2x"></i>
-                                </a>
-
-                                <div class="media-body">
-                                    <h4 class="media-heading">+1 234 567890</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </div>
+
+<div class="section" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title" data-animate="fadeInDown">About me</h2>
+            </div>
+
+            <div class="col-sm-12"><div class="row">
+                <div class="col-sm-6 text-left" data-animate="fadeInUp">
+                    <p>An sincerity so extremity he additions. Her yet <strong>there truth merit</strong>. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly. Off can admiration prosperous now devonshire diminution law.
+                    </p>
+
+                    <p>Received overcame oh sensible so at an. Formed do change merely to county it. <strong>Am separate contempt</strong> domestic to to oh. On relation my so addition branched. Put hearing cottage she norland letters equally prepare too. Replied exposed savings he no viewing as up. Soon body add him hill. No father living really people estate if. Mistake do produce beloved demesne if am pursuit.
+                    </p>
+
+                    <p>An sincerity so extremity he additions. Her yet <strong>there truth merit</strong>. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly. Off can admiration prosperous now devonshire diminution law.
+                    </p></div>
+
+                <div class="col-sm-6" data-animate="fadeInUp"><div class="skill-item"><div
+                        class="progress-title">PHP</div>
+
+                    <div class="progress"><div class="progress-bar progress-bar-skill1" role="progressbar"
+                                               aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                               style="width: 60%"><span class="sr-only">60</span></div></div></div>
+
+                    <div class="skill-item"><div class="progress-title">Javascript</div>
+
+                        <div class="progress"><div class="progress-bar progress-bar-skill2" role="progressbar"
+                                                   aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                                                   style="width: 70%"><span class="sr-only">70</span></div></div>
+                    </div>
+
+                    <div class="skill-item"><div class="progress-title">HTML coding</div>
+
+                        <div class="progress"><div class="progress-bar progress-bar-skill3" role="progressbar"
+                                                   aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                                                   style="width: 80%"><span class="sr-only">80</span></div></div>
+                    </div>
+
+                    <div class="skill-item"><div class="progress-title">SEO</div>
+
+                        <div class="progress"><div class="progress-bar progress-bar-skill4" role="progressbar"
+                                                   aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                                                   style="width: 90%"><span class="sr-only">90</span></div></div>
+                    </div>
+
+                    <div class="skill-item"><div class="progress-title">SEM</div>
+
+                        <div class="progress"><div class="progress-bar progress-bar-skill5" role="progressbar"
+                                                   aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                                                   style="width: 70%"><span class="sr-only">70</span></div></div>
+                    </div>
+                </div></div></div>
+
+            <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 mt-big" data-animate="bounceIn">
+                <asset:image src="about.jpg" class="image img-circle img-responsive" alt="This is me - IT worker"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section text-gradient" id="services">
+    <div class="container"><div class="col-md-12"><h2 class="title"
+                                                      data-animate="fadeInDown">Services</h2>
+
+        <div class="row services"><div class="col-md-4" data-animate="fadeInUp"><div class="icon"><i
+                class="fa fa-search"></i></div>
+
+            <h3 class="heading">Consulting</h3>
+
+            <p>On on produce colonel pointed. Just four sold need over how any. In to september suspicion determine he prevailed admitting. On adapted an as affixed limited on. Giving cousin warmly things no spring mr be abroad. Relation breeding be as repeated strictly followed margaret. One gravity son brought shyness waiting regular led ham.</p>
+        </div>
+
+            <div class="col-md-4" data-animate="fadeInUp"><div class="icon"><i class="fa fa-html5"></i></div>
+
+                <h3 class="heading">HTML coding</h3>
+
+                <p>Manor we shall merit by chief wound no or would. Oh towards between subject passage sending mention or it. Sight happy do burst fruit to woody begin at. Assurance perpetual he in oh determine as.</p>
+            </div>
+
+            <div class="col-md-4" data-animate="fadeInUp"><div class="icon"><i class="fa fa-tachometer"></i></div>
+
+                <h3 class="heading">PHP webdelopment</h3>
+
+                <p>Rooms oh fully taken by worse do. Points afraid but may end law lasted. Was out laughter raptures returned outweigh. Luckily cheered colonel me do we attacks on highest enabled. Tried law yet style child. Bore of true of no be deal.</p>
+            </div></div><hr>
+
+        <div class="text-center"><p class="lead">Would you like to know more or just discuss something?</p>
+
+            <p><a href="index.html#contact" class="btn btn-default btn-lg scrollTo">Contact me</a></p></div></div>
+    </div>
+</div>
+
+<div class="section text-gray" id="testimonials" data-animate="fadeInUp"><div class="container"><div
+        class="col-md-12"><div class="mb20"><h2 class="title"
+                                                data-animate="fadeInUp">My customers said<br><span>about me</span>
+    </h2>
+
+        <p class="lead text-center"
+           data-animate="fadeInUp">I am always glad to hear that my customers leave satisfied. Some of them shared with you their insights on our cooperation.</p>
+    </div><ul class="owl-carousel testimonials same-height-row" data-animate="fadeInUp"><li class="item"><div
+            class="testimonial same-height-always"><div
+                class="text"><p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+        </div>
+
+        <div class="bottom"><div class="icon"><i class="fa fa-quote-left"></i></div>
+
+            <div class="name-picture">
+                <asset:image src="person-1.jpg"/>
+                <h5>John McIntyre</h5>
+
+                <p>CEO, TransTech</p></div></div></div></li><li class="item"><div
+            class="testimonial same-height-always"><div
+                class="text"><p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream.</p>
+        </div>
+
+        <div class="bottom"><div class="icon"><i class="fa fa-quote-left"></i></div>
+
+            <div class="name-picture">
+                <asset:image src="person-2.jpg"/>
+                <h5>John McIntyre</h5>
+
+                <p>CEO, TransTech</p></div></div></div></li><li class="item"><div
+            class="testimonial same-height-always"><div
+                class="text"><p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+
+            <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+        </div>
+
+        <div class="bottom"><div class="icon"><i class="fa fa-quote-left"></i></div>
+
+            <div class="name-picture">
+                <asset:image src="person-3.jpg"/>
+                <h5>John McIntyre</h5>
+
+                <p>CEO, TransTech</p></div></div></div></li><li class="item"><div
+            class="testimonial same-height-always"><div
+                class="text"><p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+        </div>
+
+        <div class="bottom"><div class="icon"><i class="fa fa-quote-left"></i></div>
+
+            <div class="name-picture">
+                <asset:image src="person-4.jpg"/>
+                <h5>John McIntyre</h5>
+
+                <p>CEO, TransTech</p></div></div></div></li><li class="item"><div
+            class="testimonial same-height-always"><div
+                class="text"><p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+        </div>
+
+        <div class="bottom"><div class="icon"><i class="fa fa-quote-left"></i></div>
+
+            <div class="name-picture">
+                <asset:image src="person-4.jpg"/>
+                <h5>John McIntyre</h5>
+
+                <p>CEO, TransTech</p></div></div></div></li></ul></div></div></div>
+
+<div class="section text-parallax parallax-image1"><div class="container"><div
+        class="row showcase"><div class="col-md-3 col-sm-6" data-animate="fadeInUp"><div class="item"><div
+            class="icon"><i class="fa fa-align-justify"></i></div><h4><span class="counter">120</span><br>Websites
+    </h4></div></div>
+
+    <div class="col-md-3 col-sm-6" data-animate="fadeInUp"><div class="item"><div class="icon"><i
+            class="fa fa-users"></i></div><h4><span class="counter">50</span><br>Satisfied Clients</h4></div></div>
+
+    <div class="col-md-3 col-sm-6" data-animate="fadeInUp"><div class="item"><div class="icon"><i
+            class="fa fa-copy"></i></div><h4><span class="counter">320</span><br>Projects</h4></div></div>
+
+    <div class="col-md-3 col-sm-6" data-animate="fadeInUp"><div class="item"><div class="icon"><i
+            class="fa fa-font"></i></div><h4><span class="counter">333</span><br>Magazines and Brochures</h4></div>
+    </div></div></div>
+
+    <div class="dark-mask"></div></div>
+
+<div class="section" id="references"><div class="container"><div class="col-sm-12"><div class="mb20"><h2
+        class="title" data-animate="fadeInUp">My work</h2>
+
+    <p class="lead"
+       data-animate="fadeInUp">I have worked on dozens of projects so I have picked only the latest for you.</p>
+</div><ul id="filter" data-animate="fadeInUp"><li class="active"><a href="index.html#" data-filter="all">All</a>
+</li><li><a href="index.html#" data-filter="webdesign">Webdesign</a></li><li><a href="index.html#"
+                                                                                data-filter="seo">SEO</a></li><li><a
+        href="index.html#" data-filter="marketing">Marketing</a></li><li><a href="index.html#"
+                                                                            data-filter="other">Other</a></li></ul>
+
+    <div id="detail"><span class="close">&times;</span>
+
+        <div id="detail-slider"></div>
+
+        <div class="text-center"><h1 id="detail-title">&nbsp;</h1></div>
+
+        <div id="detail-content"></div></div>
+
+    <div id="references-masonry" data-animate="fadeInUp">
+        <div class="reference-item" data-category="webdesign">
+            <div class="reference">
+                <a href="index.html#">
+                    <asset:image src="portfolio-1.jpg" class="img-responsive" alt=""/>
+
+                    <div class="overlay">
+                        <h3 class="reference-title">Project name</h3>
+
+                        <p>Short project description goes here...</p>
+                    </div>
+                </a>
+
+                <div class="sr-only reference-description"
+                     data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg"><p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+
+                    <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+
+                    <p class="buttons"><a class="btn btn-primary" href="javascript:void(0);"><i
+                            class="fa fa-globe"></i> Visit website</a> <a class="btn btn-primary"
+                                                                          href="javascript:void(0);"><i
+                                class="fa fa-download"></i> Download case study</a></p></div></div></div>
+
+        <div class="reference-item" data-category="seo"><div class="reference"><a href="index.html#">
+            <asset:image src="portfolio-2.jpg" class="img-responsive" alt=""/>
+
+            <div class="overlay"><h3 class="reference-title">Project name</h3>
+
+                <p>Short project description goes here...</p></div></a>
+
+            <div class="sr-only reference-description"
+                 data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg"><p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+
+                <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+
+                <p class="buttons"><a class="btn btn-primary" href="javascript:void(0);"><i
+                        class="fa fa-globe"></i> Visit website</a> <a class="btn btn-primary"
+                                                                      href="javascript:void(0);"><i
+                            class="fa fa-download"></i> Download case study</a></p></div></div></div>
+
+        <div class="reference-item" data-category="marketing"><div class="reference"><a href="index.html#">
+
+            <asset:image src="portfolio-3.jpg" class="img-responsive" alt=""/>
+
+            <div class="overlay"><h3 class="reference-title">Project name</h3>
+
+                <p>Short project description goes here...</p></div></a>
+
+            <div class="sr-only reference-description"
+                 data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg"><p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+
+                <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+
+                <p class="buttons"><a class="btn btn-primary" href="javascript:void(0);"><i
+                        class="fa fa-globe"></i> Visit website</a> <a class="btn btn-primary"
+                                                                      href="javascript:void(0);"><i
+                            class="fa fa-download"></i> Download case study</a></p></div></div></div>
+
+        <div class="reference-item" data-category="marketing"><div class="reference"><a href="index.html#">
+            <asset:image src="portfolio-4.jpg" class="img-responsive" alt=""/>
+
+            <div class="overlay"><h3 class="reference-title">Project name</h3>
+
+                <p>Short project description goes here...</p></div></a>
+
+            <div class="sr-only reference-description"
+                 data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg"><p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+
+                <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+
+                <p class="buttons"><a class="btn btn-primary" href="javascript:void(0);"><i
+                        class="fa fa-globe"></i> Visit website</a> <a class="btn btn-primary"
+                                                                      href="javascript:void(0);"><i
+                            class="fa fa-download"></i> Download case study</a></p></div></div></div>
+
+        <div class="reference-item" data-category="webdesign"><div class="reference"><a href="index.html#">
+            <asset:image src="portfolio-5.jpg" class="img-responsive" alt=""/>
+            <div class="overlay"><h3 class="reference-title">Project name</h3>
+
+                <p>Short project description goes here...</p></div></a>
+
+            <div class="sr-only reference-description"
+                 data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg"><p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+
+                <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+
+                <p class="buttons"><a class="btn btn-primary" href="javascript:void(0);"><i
+                        class="fa fa-globe"></i> Visit website</a> <a class="btn btn-primary"
+                                                                      href="javascript:void(0);"><i
+                            class="fa fa-download"></i> Download case study</a></p></div></div></div>
+
+        <div class="reference-item" data-category="other"><div class="reference"><a href="index.html#">
+            <asset:image src="portfolio-6.jpg" class="img-responsive" alt=""/>
+
+            <div class="overlay"><h3 class="reference-title">Project name</h3>
+
+                <p>Short project description goes here...</p></div></a>
+
+            <div class="sr-only reference-description"
+                 data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg"><p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+
+                <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+
+                <p class="buttons"><a class="btn btn-primary" href="javascript:void(0);"><i
+                        class="fa fa-globe"></i> Visit website</a> <a class="btn btn-primary"
+                                                                      href="javascript:void(0);"><i
+                            class="fa fa-download"></i> Download case study</a></p></div></div></div>
+
+        <div class="reference-item" data-category="seo"><div class="reference"><a href="index.html#">
+            <asset:image src="portfolio-7.jpg" class="img-responsive" alt=""/>
+            <div class="overlay"><h3 class="reference-title">Project name</h3>
+
+                <p>Short project description goes here...</p></div></a>
+
+            <div class="sr-only reference-description"
+                 data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg"><p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+
+                <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+
+                <p class="buttons"><a class="btn btn-primary" href="javascript:void(0);"><i
+                        class="fa fa-globe"></i> Visit website</a> <a class="btn btn-primary"
+                                                                      href="javascript:void(0);"><i
+                            class="fa fa-download"></i> Download case study</a></p></div></div></div>
+
+        <div class="reference-item" data-category="webdesign"><div class="reference"><a href="index.html#">
+            <asset:image src="portfolio-8.jpg" class="img-responsive" alt=""/>
+
+            <div class="overlay"><h3 class="reference-title">Project name</h3>
+
+                <p>Short project description goes here...</p></div></a>
+
+            <div class="sr-only reference-description"
+                 data-images="img/main-slider1.jpg,img/main-slider2.jpg,img/main-slider3.jpg"><p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+
+                <p>Sitting mistake towards his few country ask. You delighted two rapturous six depending objection happiness something the. Off nay impossible dispatched partiality unaffected. Norland adapted put ham cordial. Ladies talked may shy basket narrow see. Him she distrusts questions sportsmen. Tolerably pretended neglected on my earnestly by. Sex scale sir style truth ought.</p>
+
+                <p class="buttons"><a class="btn btn-primary" href="javascript:void(0);"><i
+                        class="fa fa-globe"></i> Visit website</a> <a class="btn btn-primary"
+                                                                      href="javascript:void(0);"><i
+                            class="fa fa-download"></i> Download case study</a></p></div></div></div></div></div>
+</div></div>
+
+<div class="section text-gray" id="customers">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-sm-4 col-md-2 col-xs-6">
+                    <div class="customer">
+                        <asset:image class="img-responsive" src="customers/kofola.png" title="Kofola"
+                                     data-placement="bottom"
+                                     data-toggle="tooltip" alt=""/>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-2 col-xs-6">
+                    <div class="customer">
+                        <asset:image class="img-responsive" src="customers/evian.png" title="Evian"
+                                     data-placement="bottom" data-toggle="tooltip" alt=""/>
+                    </div>
+                </div>
+
+                <div class=" col-sm-4 col-md-2 col-xs-6">
+                    <div class="customer">
+                        <asset:image class="img-responsive" src="customers/cslink.png"
+                                     title="CS Link" data-placement="bottom"
+                                     data-toggle="tooltip" alt=""/>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-2 col-xs-6">
+                    <div class="customer">
+                        <asset:image class="img-responsive" src="customers/botas66.png"
+                                     title="Botas 66 Concept store"
+                                     data-placement="bottom" data-toggle="tooltip" alt=""/>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-2 col-xs-6">
+                    <div class="customer">
+                        <asset:image class="img-responsive" src="customers/mdfc.png"
+                                     title="MediaFabríca"
+                                     data-placement="bottom" data-toggle="tooltip" alt=""/>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-2 col-xs-6">
+                    <div class="customer">
+                        <asset:image class="img-responsive" src="customers/vanek.png"
+                                     title="VANĚK Strojírenská výroba"
+                                     data-placement="bottom" data-toggle="tooltip" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section contact" id="contact" data-animate="bounceIn">
+    <div class="container">
+        <div class="col-md-12">
+            <h2 class="title">Contact me</h2>
+
+            <div class="row"><div class="col-md-8 col-md-offset-2"><form id="contact-form" method="post"
+                                                                         action="http://it-worker.ondrejsvestka.cz/contact.php"><div
+                        class="messages"></div>
+
+                <div class="controls"><div class="row"><div class="col-md-6"><input type="text" name="name"
+                                                                                    class="form-control"
+                                                                                    placeholder="Your firstname *"
+                                                                                    required="required"></div>
+
+                    <div class="col-md-6"><input type="text" name="surname" class="form-control"
+                                                 placeholder="Your lastname *" required="required"></div>
+
+                    <div class="col-md-6"><input type="text" name="email" class="form-control"
+                                                 placeholder="Your email *"
+                                                 required="required"></div>
+
+                    <div class="col-md-6"><input type="text" name="phone" class="form-control"
+                                                 placeholder="Your phone">
+                    </div>
+
+                    <div class="col-md-12"><textarea name="message" class="form-control"
+                                                     placeholder="Message for me *"
+                                                     rows="4" required="required"></textarea></div>
+
+                    <div class="col-md-12 text-center"><input type="submit" class="btn btn-primary btn-lg"
+                                                              value="Send message"></div></div></div></form></div>
+            </div>
+        </div></div></div>
+
+<div class="section" id="map"></div>
 </body>
 </html>
