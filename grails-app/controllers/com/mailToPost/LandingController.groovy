@@ -13,7 +13,9 @@ class LandingController {
 
     def decide() {
         User user = springSecurityService.currentUser
+        println("user ${user}")
         List<Role> roles = user.getAuthorities().toList()
+        println("roles ${roles}")
         roles.each { print it }
         if (roles.authority.contains("ROLE_ADMIN")) {
             redirect(controller: "admin", action: "index")

@@ -43,6 +43,12 @@ class BootStrap {
             UserRole.create(admin, roleAdmin, true)
             UserRole.create(admin, roleSubAdmin, true)
         }
+
+        if (!User.findByUsername("vijay@nexthoughts.com")) {
+            User admin = new User(username: "vijay@nexthoughts.com", password: "123456", firstName: "Vijay", lastName: "Shukla")
+            admin.save(flush: true, failOnError: true)
+            UserRole.create(admin, roleUser, true)
+        }
     }
     def destroy = {
     }
