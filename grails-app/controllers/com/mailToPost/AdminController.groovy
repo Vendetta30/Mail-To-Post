@@ -1,4 +1,4 @@
-package com.springSecurity
+package com.mailToPost
 
 import grails.plugin.springsecurity.annotation.Secured
 
@@ -6,6 +6,6 @@ import grails.plugin.springsecurity.annotation.Secured
 class AdminController {
 
     def index() {
-        render "I am a ADMIN"
+
     }
 }

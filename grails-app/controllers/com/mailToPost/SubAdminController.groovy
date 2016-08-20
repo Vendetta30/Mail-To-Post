@@ -1,4 +1,4 @@
-package com.springSecurity
+package com.mailToPost
 
 import grails.plugin.springsecurity.annotation.Secured
 
