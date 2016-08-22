@@ -1,5 +1,6 @@
 package com.springSecurity
 
+import com.mailToPost.AdminController
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 
