@@ -1,5 +1,6 @@
 package com.springSecurity
 
+import co.RegisterCO
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
 
@@ -24,6 +25,13 @@ class User implements Serializable {
         this()
         this.username = username
         this.password = password
+    }
+
+    User(RegisterCO registerCO) {
+        this.username = registerCO.username
+        this.password = registerCO.password
+        this.firstName = registerCO.firstName
+        this.lastName = registerCO.lastName
     }
 
     Set<Role> getAuthorities() {
