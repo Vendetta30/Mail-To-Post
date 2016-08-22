@@ -2,54 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <g:layoutHead/>
     <title><g:layoutTitle/></title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
-
-    <!-- Canonical SEO -->
-    <link rel="canonical" href="http://www.creative-tim.com/product/paper-dashboard"/>
-
-    <!--  Social tags      -->
-    <meta name="keywords"
-          content="bootstrap dashboard, creative tim, html dashboard, html css dashboard, web dashboard, paper design, bootstrap dashboard, bootstrap, css3 dashboard, bootstrap admin, paper bootstrap dashboard, frontend, responsive bootstrap dashboard">
-
-    <meta name="description" content="Paper Dashboard is a beautiful Bootstrap Admin Panel for your next project.">
-
-    <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="Paper Dashboard by Creative Tim">
-    <meta itemprop="description" content="Paper Dashboard is a beautiful Bootstrap Admin Panel for your next project.">
-    <meta itemprop="image"
-          content="http://s3.amazonaws.com/creativetim_bucket/products/43/original/opt_pd_thumbnail.jpg">
-
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@creativetim">
-    <meta name="twitter:title" content="Paper Dashboard PRO by Creative Tim">
-    <meta name="twitter:description"
-          content="Paper Dashboard is a beautiful Bootstrap Admin Panel for your next project.">
-    <meta name="twitter:creator" content="@creativetim">
-    <meta name="twitter:image"
-          content="http://s3.amazonaws.com/creativetim_bucket/products/43/original/opt_pd_thumbnail.jpg">
     <link rel="shortcut icon" href="${assetPath(src: 'favicon.png')}" type="image/x-icon">
-
-    <!-- Open Graph data -->
-    <meta property="og:title" content="Paper Dashboard by Creative Tim"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content="http://demos.creative-tim.com/paper-dashboard/dashboard.html"/>
-    <meta property="og:image"
-          content="http://s3.amazonaws.com/creativetim_bucket/products/43/original/opt_pd_thumbnail.jpg"/>
-    <meta property="og:description"
-          content="Paper Dashboard is a beautiful Bootstrap Admin Panel for your next project."/>
-    <meta property="og:site_name" content="Creative Tim"/>
-
-    <!--  Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'themify-icons.css')}">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <asset:stylesheet src="user-application.css"/>
     <asset:javascript src="user-application.js"/>
 </head>
@@ -173,7 +134,7 @@
         </nav>
 
 
-<g:layoutBody/>
+        <g:layoutBody/>
 
         <footer class="footer">
             <div class="container-fluid">
@@ -181,26 +142,20 @@
                     <ul>
 
                         <li>
-                            <a href="http://www.creative-tim.com">
-                                Creative Tim
-                            </a>
+                            Creative Tim
                         </li>
                         <li>
-                            <a href="http://blog.creative-tim.com">
-                                Blog
-                            </a>
+                            Blog
                         </li>
                         <li>
-                            <a href="http://www.creative-tim.com/license">
-                                Licenses
-                            </a>
+                            Licenses
                         </li>
                     </ul>
                 </nav>
 
                 <div class="copyright pull-right">
                 &copy; <script>document.write(new Date().getFullYear())</script>, made with <i
-                        class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>
+                        class="fa fa-heart heart"></i> by Creative Tim
                 </div>
             </div>
         </footer>
@@ -235,8 +190,7 @@
 
             <li class="button-container">
                 <div class="">
-                    <a href="http://www.creative-tim.com/product/paper-dashboard" target="_blank"
-                       class="btn btn-danger btn-block btn-fill">Download for Free</a>
+                    Download for Free
                 </div>
             </li>
 
@@ -253,23 +207,4 @@
 </div>
 
 </body>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-
-        demo.initChartist();
-
-        $.notify({
-            icon: 'ti-gift',
-            message: "Welcome to <b>Paper Dashboard</b> - a beautiful Bootstrap Admin Panel for your next project."
-
-        }, {
-            type: 'success',
-            timer: 4000
-        });
-
-    });
-</script>
-
 </html>

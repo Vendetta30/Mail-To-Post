@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="${assetPath(src: 'favicon.png')}" type="image/x-icon">
     <asset:stylesheet src="admin-application.css"/>
     <asset:javascript src="admin-application.js"/>
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'font-awesome.css')}">
     <g:layoutHead/>
 </head>
 

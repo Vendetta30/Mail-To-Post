@@ -12,7 +12,6 @@
 //= require user/bootstrap-notify.js
 //= require user/paper-dashboard.js
 //= require user/demo.js
-//= require user/jquery.sharrre.js
 //= require_tree .
 //= require_self
 

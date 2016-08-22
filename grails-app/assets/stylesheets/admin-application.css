@@ -8,7 +8,6 @@
 * compiled file, but it's generally better to create a new file per style scope.
 *
 *= require admin/jquery-ui-1.10.4.custom.min.css
-*= require font-awesome.css
 *= require bootstrap.min.css
 *= require animate.css
 *= require admin/all.css
