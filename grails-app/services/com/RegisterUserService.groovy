@@ -15,7 +15,7 @@ class RegisterUserService {
     def registerUser(params) {
 
         Role roleUser
-        User user = new User(username: params.username, email: params.email, password: params.password, firstName: params.firstName, lastName: params.lastName)
+        User user = new User(username: params.username, password: params.password, firstName: params.firstName, lastName: params.lastName)
 
         user.save(flush: true, failOnError: true)
 
