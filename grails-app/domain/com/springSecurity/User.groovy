@@ -1,5 +1,9 @@
 package com.springSecurity
 
+import com.mailToPost.Address
+import com.mailToPost.AddressBook
+import com.mailToPost.AdminSetting
+import com.mailToPost.Notification
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
 
@@ -15,10 +19,13 @@ class User implements Serializable {
     String password
     String firstName
     String lastName
-	boolean enabled = true
-	boolean accountExpired
-	boolean accountLocked
-	boolean passwordExpired
+    boolean enabled = true
+    boolean accountExpired
+    boolean accountLocked
+    boolean passwordExpired
+    AdminSetting adminSetting
+
+    static hasMany = [addresses: Address, addressBooks: AddressBook, notifications: Notification]
 
     User(String username, String password) {
         this()
@@ -49,6 +56,7 @@ class User implements Serializable {
     static constraints = {
         username blank: false, unique: true
         password blank: false
+        adminSetting nullable: true
     }
 
     static mapping = {

@@ -16,7 +16,6 @@
         box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
     }
 
-
     .panel-login > .panel-heading {
         color: #00415d;
         background-color: #fff;
@@ -38,7 +37,6 @@
         color: #029f5b;
         font-size: 18px;
     }
-
 
     .panel-login > .panel-heading hr {
         margin-top: 10px;
@@ -69,6 +67,7 @@
         box-shadow: none;
         border-color: #ccc;
     }
+
     .btn-login {
         background-color: #029f5b;
         outline: none;
@@ -80,14 +79,13 @@
         text-transform: uppercase;
         border-color: #029f5b;
     }
+
     .btn-login:hover,
     .btn-login:focus {
         color: #fff;
         background-color: #029f5b;
         border-color: #029f5b;
     }
-
-
 
     .forgot-password {
         text-decoration: underline;
@@ -107,7 +105,6 @@
         -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
     }
-
 
     .panel-register > .panel-heading {
         color: #00415d;
@@ -130,7 +127,6 @@
         color: orange;
         font-size: 18px;
     }
-
 
     .panel-register > .panel-heading hr {
         margin-top: 10px;
@@ -161,6 +157,7 @@
         box-shadow: none;
         border-color: #ccc;
     }
+
     .btn-register {
         background-color: orange;
         outline: none;
@@ -172,6 +169,7 @@
         text-transform: uppercase;
         border-color: orange;
     }
+
     .btn-register:hover,
     .btn-register:focus {
         color: #fff;
@@ -276,7 +274,7 @@
                                 <form id="register-form"
                                       action="${createLink(controller: "registerUser", action: "register")}"
                                       method="post"
-                                      role="form" >
+                                      role="form">
                                     <div class="form-group">
                                         <label for="username">Username</label>
                                         <input type="text" name="username" id="username" tabindex="11"
