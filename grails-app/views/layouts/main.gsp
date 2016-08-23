@@ -16,6 +16,8 @@
     <link rel="shortcut icon" href="${assetPath(src: 'favicon.png')}" type="image/x-icon">
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'font-awesome.css')}">
+    <!-- Ionicons -->
     <g:layoutHead/>
 </head>
 

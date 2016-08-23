@@ -1,0 +1,20 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS file within this directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require admin/jquery-ui-1.10.4.custom.min.css
+*= require bootstrap.min.css
+*= require animate.css
+*= require admin/all.css
+*= require admin/main.css
+*= require admin/style-responsive.css
+*= require admin/zabuto_calendar.min.css
+*= require admin/pace.css
+*= require admin/jquery.news-ticker.css
+*= require_self
+*/
