@@ -1,5 +1,6 @@
 package com
 
+import com.mailToPost.BootstrapService
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 
