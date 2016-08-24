@@ -9,6 +9,10 @@ class AdminController {
         render(view: 'index')
     }
 
+    def calendar() {
+        render(view: 'calendar')
+    }
+
     def setting() {
         render(view: 'setting')
     }

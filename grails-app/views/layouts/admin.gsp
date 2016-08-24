@@ -71,7 +71,8 @@
                                     <i class="fa fa-user"></i>My Profile
                                 </a>
                             </li>
-                            <li><a href="index.html#"><i class="fa fa-calendar"></i>My Calendar</a></li>
+                            <li><a href="${createLink(controller: 'admin', action: 'calendar')}"><i
+                                    class="fa fa-calendar"></i>My Calendar</a></li>
                             <li><a href="index.html#"><i class="fa fa-envelope"></i>My Inbox<span
                                     class="badge badge-danger">3</span></a></li>
                             <li><a href="index.html#"><i class="fa fa-tasks"></i>My Tasks<span
@@ -121,5 +122,6 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
