@@ -18,7 +18,7 @@ class BootstrapService {
         Role adminRole = Role.findByAuthority("ROLE_ADMIN")
         Role subAdminRole = Role.findByAuthority("ROLE_SUBADMIN")
         Role userRole = Role.findByAuthority("ROLE_USER")
-        if (!User.findByUsername("admin")) {
+        if (!User.findByUsername("admin@gmail.com")) {
             User userAdmin = new User(username: "admin@gmail.com", password: "123456", firstName: "admin_first", lastName: "admin_last")
             userAdmin.save(flush: true, failOnError: true)
             UserRole.create(userAdmin, adminRole, true)
@@ -29,7 +29,7 @@ class BootstrapService {
 
     public void createSubAdmin() {
         Role subAdminRole = Role.findByAuthority("ROLE_SUBADMIN")
-        if (!User.findByUsername("subadmin")) {
+        if (!User.findByUsername("subadmin@gmail.com")) {
             User userSubAdmin = new User(username: "subadmin@gmail.com", password: "123456", firstName: "subadmin_first", lastName: "subadmin_last")
             userSubAdmin.save(flush: true, failOnError: true)
             UserRole.create(userSubAdmin, subAdminRole, true)
