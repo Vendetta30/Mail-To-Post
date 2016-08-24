@@ -73,12 +73,9 @@
                             </li>
                             <li><a href="${createLink(controller: 'admin', action: 'calendar')}"><i
                                     class="fa fa-calendar"></i>My Calendar</a></li>
-                            <li><a href="index.html#"><i class="fa fa-envelope"></i>My Inbox<span
-                                    class="badge badge-danger">3</span></a></li>
                             <li><a href="index.html#"><i class="fa fa-tasks"></i>My Tasks<span
                                     class="badge badge-success">7</span></a></li>
                             <li class="divider"></li>
-                            <li><a href="index.html#"><i class="fa fa-lock"></i>Lock Screen</a></li>
                             <li><a href="${createLink(controller: 'logout', action: 'index')}"><i
                                     class="fa fa-key"></i>Log Out</a></li>
                         </ul>
