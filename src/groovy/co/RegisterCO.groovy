@@ -28,7 +28,7 @@ class RegisterCO {
 
 
         firstName blank: false, nullable: false
-        lastName blank: false,nullable: false
+        lastName blank: false, nullable: false
 
         password blank: false, minSize: 3
 

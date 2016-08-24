@@ -9,5 +9,13 @@ class UrlMappings {
 
         "/"(view: "index")
         "500"(view: '/error')
+        "/login"(controller: "login", action: 'auth')
+        //================Rest API===============
+        "/user/api/v1/$action?(.${format})?" {
+            controller = 'rest'
+            namespace = 'version1'
+        }
     }
+
+
 }
