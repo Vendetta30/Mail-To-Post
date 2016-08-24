@@ -17,12 +17,13 @@ class Email {
     static hasMany = [attachments: Attachments, letters: Letter]
 
     static constraints = {
-        messagId(nullable: false)
-        senderName(nullable: false)
-        senderEmail(nullable: false)
-        messageSentDate(nullable: false)
-        messageSubject(nullable: true)
-        messageBody(nullable: true)
+        messagId(nullable: false,blank: false)
+        senderName(nullable: false,blank: false)
+        senderEmail(nullable: false,blank: false)
+        messageSentDate(nullable: false,blank: false)
+        messageSubject(nullable: true,blank: true)
+        messageBody(nullable: true,blank: true)
+        emailType(nullable: true)
     }
     static mapping = {
         messageBody type: "text"
