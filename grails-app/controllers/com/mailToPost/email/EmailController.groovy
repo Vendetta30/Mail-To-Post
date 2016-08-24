@@ -17,6 +17,9 @@ class EmailController {
         println("roles ${roles}")
         roles.each { print it }
         render(view: 'index')
-//        emailService.readMail()
+    }
+
+    def refreshEmail() {
+        emailService.readMail()
     }
 }

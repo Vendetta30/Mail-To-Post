@@ -12,6 +12,7 @@ class UrlMappings {
         "/login"(controller: "login", action: 'auth')
         "/adminSetting"(controller: 'admin', action: 'setting')
         "/adminEmail"(controller: 'email', action: 'index')
+        "/adminDashboard"(controller: 'admin', action: 'index')
         //================Rest API===============
         "/user/api/v1/$action?(.${format})?" {
             controller = 'rest'
