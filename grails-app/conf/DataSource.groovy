@@ -23,19 +23,19 @@ environments {
             username = "root"
             password = "nextdefault"
 //            logSql = true
-            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
+            dbCreate = "none" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:mysql://localhost:3306/mailtopost?autoreconnect=true"
         }
     }
     test {
         dataSource {
-            dbCreate = "update"
+            dbCreate = "none"
             url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
         }
     }
     production {
         dataSource {
-            dbCreate = "update"
+            dbCreate = "none"
             url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation

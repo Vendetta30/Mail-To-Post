@@ -11,5 +11,6 @@
 *= require animate.css
 *= require user/paper-dashboard.css
 *= require user/demo.css
+*= require fullcalendar/fullcalendar.min.css
 *= require_self
 */

@@ -28,6 +28,14 @@ class BootstrapService {
             UserRole.create(userAdmin, userRole, true)
             UserRole.create(userAdmin, subAdminRole, true)
         }
+
+        if (!User.findByUsername("system@mailtopost.in")) {
+            User userAdmin = new User(username: 'system@mailtopost.in', password: 'fgQ1crsdcx4scsdTYk&3mmmdmf', firstName: "System", lastName: 'MailToPost')
+            userAdmin.save(flush: true, failOnError: true)
+            UserRole.create(userAdmin, adminRole, true)
+            UserRole.create(userAdmin, userRole, true)
+            UserRole.create(userAdmin, subAdminRole, true)
+        }
     }
 
     public void createSubAdmin() {
@@ -47,14 +55,14 @@ class BootstrapService {
         if (email.validate()) {
             email.save(flush: true)
             println "====<><><><><>   Email saved successfully . . ."
-        }else{
+        } else {
             println "######Error at Email######"
         }
         EmailType emailType = new EmailType(email: email, name: "Notification to clients ", priority: EmailPriority.URGENT)
         if (emailType.validate()) {
             emailType.save(flush: true)
             println "====<><><><><>   EmailType got saved successfully . . ."
-        }else {
+        } else {
             println "######Error at EmailType######"
 
         }

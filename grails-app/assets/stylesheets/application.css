@@ -14,5 +14,6 @@
 *= require owl.carousel.css
 *= require owl.theme.css
 *= require animate.css
+*= require fullcalendar/fullcalendar.min.css
 *= require_self
 */
