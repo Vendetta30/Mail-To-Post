@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="${assetPath(src: 'favicon.png')}" type="image/x-icon">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'themify-icons.css')}">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
     <asset:stylesheet src="user-application.css"/>
     <asset:javascript src="user-application.js"/>
 </head>
@@ -70,13 +71,6 @@
                         <p>Maps</p>
                     </a>
                 </li>
-                <li>
-                    <a href="notifications.html">
-                        <i class="ti-bell"></i>
-
-                        <p>Notifications</p>
-                    </a>
-                </li>
             </ul>
         </div>
     </div>
@@ -91,7 +85,6 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="dashboard.html#">Dashboard</a>
                 </div>
 
                 <div class="collapse navbar-collapse">
@@ -104,7 +97,7 @@
                             </a>
                         </li>
                         <li class="dropdown">
-                            <a href="dashboard.html#" class="dropdown-toggle" data-toggle="dropdown">
+                            <a href="${createLink(controller: 'notification', action: 'list')}">
                                 <i class="ti-bell"></i>
 
                                 <p class="notification">5</p>
@@ -112,16 +105,9 @@
                                 <p>Notifications</p>
                                 <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="dashboard.html#">Notification 1</a></li>
-                                <li><a href="dashboard.html#">Notification 2</a></li>
-                                <li><a href="dashboard.html#">Notification 3</a></li>
-                                <li><a href="dashboard.html#">Notification 4</a></li>
-                                <li><a href="dashboard.html#">Another notification</a></li>
-                            </ul>
                         </li>
                         <li>
-                            <a href="dashboard.html#">
+                            <a href="${createLink(controller: 'adminSetting', action: 'index')}">
                                 <i class="ti-settings"></i>
 
                                 <p>Settings</p>
@@ -132,7 +118,6 @@
                 </div>
             </div>
         </nav>
-
 
         <g:layoutBody/>
 
@@ -160,49 +145,6 @@
             </div>
         </footer>
 
-    </div>
-</div>
-
-<div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-        <a href="dashboard.html#" data-toggle="dropdown">
-            <i class="fa fa-cog fa-2x"></i>
-        </a>
-        <ul class="dropdown-menu">
-            <li class="header-title">Sidebar Background</li>
-            <li class="adjustments-line text-center">
-                <a href="javascript:void(0)" class="switch-trigger background-color">
-                    <span class="badge filter badge-white active" data-color="white"></span>
-                    <span class="badge filter badge-black" data-color="black"></span>
-                </a>
-            </li>
-
-            <li class="header-title">Sidebar Active Color</li>
-            <li class="adjustments-line text-center">
-                <a href="javascript:void(0)" class="switch-trigger active-color">
-                    <span class="badge filter badge-primary" data-color="primary"></span>
-                    <span class="badge filter badge-info" data-color="info"></span>
-                    <span class="badge filter badge-success" data-color="success"></span>
-                    <span class="badge filter badge-warning" data-color="warning"></span>
-                    <span class="badge filter badge-danger active" data-color="danger"></span>
-                </a>
-            </li>
-
-            <li class="button-container">
-                <div class="">
-                    Download for Free
-                </div>
-            </li>
-
-            <li class="header-title">Thank you for sharing!</li>
-
-            <li class="button-container">
-                <button id="twitter" class="btn btn-social btn-twitter btn-round"><i class="fa fa-twitter"></i></button>
-                <button id="facebook" class="btn btn-social btn-facebook btn-round"><i
-                        class="fa fa-facebook-square"></i></button>
-            </li>
-
-        </ul>
     </div>
 </div>
 
