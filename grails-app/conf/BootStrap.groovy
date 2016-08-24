@@ -7,6 +7,7 @@ class BootStrap {
         bootstrapService.createRoles()
         bootstrapService.createAdmin()
         bootstrapService.createSubAdmin()
+        bootstrapService.createEmail()
     }
     def destroy = {
     }
