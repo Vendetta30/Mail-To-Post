@@ -252,7 +252,7 @@ class EmailService {
         return emailVO
     }
 
-    def replyEmail(EmailMessage emailMessage, String replyText) {
+    def replyEmail(Email emailMessage, String replyText) {
         Properties props = new Properties();
         props.put("mail.smtp.host", "auth.smtp.1and1.co.uk");
         props.put("mail.smtp.socketFactory.port", "587");
