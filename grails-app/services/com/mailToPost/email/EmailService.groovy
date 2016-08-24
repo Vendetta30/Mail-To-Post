@@ -35,18 +35,19 @@ class EmailService {
     def grailsApplication
 
     def readMail() {
+        println("CHECKING")
         Properties props = System.getProperties();
         props.setProperty("mail.store.protocol", "imaps");
         List<EmailVO> emailVOs = []
         try {
             Session session = Session.getInstance(props, null);
             Store store = session.getStore("imaps");
-            final String username = grailsApplication?.config?.grails?.mail?.username
-            final String password = grailsApplication?.config?.grails?.mail?.password
-            store.connect("imap.1and1.co.uk", 993, username, password);
+            final String username = "vshukla684@gmail.com"
+            final String password = "Pintu30\$"
+            store.connect("imap.gmail.com", username, password);
             Folder inbox = store.getFolder("INBOX");
             inbox.open(Folder.READ_ONLY);
-            SearchTerm newerThan = new ReceivedDateTerm(ComparisonTerm.GT, new Date() - 1);
+            SearchTerm newerThan = new ReceivedDateTerm(ComparisonTerm.GT, new Date() - 2);
             List messages = inbox.search(newerThan);
             log.info("//////////fetchUnreadMail/////populating to VO///earlier//${messages?.size()}////")
 
@@ -64,6 +65,9 @@ class EmailService {
         println("////////started saving//////mail//")
         emailVOs.eachWithIndex { EmailVO emailVO, int i2 ->
             println("Email MessageId ${emailVO?.messagId}")
+            if (emailVO?.messagId == "fe5325\$qqqlpq@mgw07.tbsl.in") {
+                println(emailVO?.senderEmail)
+            }
             Email unreadMail = Email.findByMessagId(emailVO?.messagId)
             if (!unreadMail) {
                 unreadMail = new Email(emailVO)

@@ -10,6 +10,8 @@ class UrlMappings {
         "/"(view: "index")
         "500"(view: '/error')
         "/login"(controller: "login", action: 'auth')
+        "/adminSetting"(controller: 'admin', action: 'setting')
+        "/adminEmail"(controller: 'email', action: 'index')
         //================Rest API===============
         "/user/api/v1/$action?(.${format})?" {
             controller = 'rest'
