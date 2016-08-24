@@ -11,8 +11,10 @@ class Letter {
     Date lastUpdated
 
     static belongsTo = [email: Email]
-    static hasMany = [letterPosts: LetterPost]
+    static hasOne = [letterPost: LetterPost]
 
     static constraints = {
+        letterFooter(nullable: true, blank: true)
+        letterHeader(nullable: true, blank: true)
     }
 }

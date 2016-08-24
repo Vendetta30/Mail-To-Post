@@ -1,9 +1,11 @@
 package com.mailToPost
 
+import enums.EmailPriority
+
 class EmailType {
 
     String name
-    String priority
+    EmailPriority priority = EmailPriority.NORMAL
     Date dateCreated
     Date lastUpdated
 

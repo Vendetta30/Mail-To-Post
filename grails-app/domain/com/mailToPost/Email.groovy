@@ -13,5 +13,9 @@ class Email {
     static hasMany = [attachments: Attachments, letters: Letter]
 
     static constraints = {
+        from(nullable: false, blank: false)
+        to(nullable: false, blank: false)
+        subject(nullable: true,blank: true)
+        emailBody(nullable: true, blank: true)
     }
 }

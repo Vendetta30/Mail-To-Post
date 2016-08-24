@@ -10,5 +10,8 @@ class Attachments {
 
     static belongsTo = [email: Email]
     static constraints = {
+        fileName(nullable: true)
+        filePath(nullable: true)
+        fileType(nullable: true)
     }
 }
