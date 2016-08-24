@@ -1,4 +1,4 @@
-package com
+package com.mailToPost
 
 import com.springSecurity.Role
 import com.springSecurity.User
