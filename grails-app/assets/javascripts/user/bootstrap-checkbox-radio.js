@@ -215,7 +215,7 @@
   }
 
   $.fn.radio.defaults = {
-    template: '<span class="icons"><span class="first-icon fa fa-circle-o fa-base"></span><span class="second-icon fa fa-dot-circle-o fa-base"></span></span>'
+    template: '<span class="icons"></span>'
   }
 
 
