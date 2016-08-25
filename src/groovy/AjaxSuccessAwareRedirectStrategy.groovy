@@ -1,6 +1,5 @@
 import grails.plugin.springsecurity.SpringSecurityUtils
 import org.springframework.security.web.DefaultRedirectStrategy
-
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 

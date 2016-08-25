@@ -3,7 +3,7 @@ package mailToPost
 import grails.converters.JSON
 import org.apache.commons.lang.StringUtils
 
-class ApplicationFilterFilters {
+class ApplicationFilters {
 
     def filters = {
         jsonify(controller: '*', action: '*') {
