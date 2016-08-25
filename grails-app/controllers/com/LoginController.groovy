@@ -33,7 +33,6 @@ class LoginController extends grails.plugin.springsecurity.LoginController {
                 redirect = applicationTagLib.createLink(controller: 'landing', action: 'decide', absolute: true)
             }
         }
-        println "LoginControllerAjaxAuthParams " + params
         render([success: true, username: springSecurityService.authentication.name] << (redirect ? [redirect: redirect] : [:]) as JSON)
     }
 }

@@ -23,7 +23,7 @@ class EmailController {
 
     def filter() {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
-        render(template: 'filter', model: [emailInstanceList: Email.list(params), emailInstanceTotal: Email.count()])
+        render(template: 'emailTemplate', model: [emailInstanceList: Email.list(params), emailInstanceTotal: Email.count()])
     }
 
     def refreshEmail() {
