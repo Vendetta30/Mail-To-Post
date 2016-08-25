@@ -48,10 +48,9 @@ class BootstrapService {
     }
 
     public void createEmail() {
-
+        User user = User.findByUsername("system@mailtopost.in")
         Email email = new Email(messagId: "MSG_001", senderName: "Yashwant Singh", senderEmail: "vijay@nexthoughts.com",
-                messageSentDate: new Date().toString(), checked: true)
-
+                messageSentDate: new Date().toString(), checked: true,user:user)
         if (email.validate()) {
             email.save(flush: true)
             println "====<><><><><>   Email saved successfully . . ."
