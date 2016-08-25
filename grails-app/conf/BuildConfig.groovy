@@ -77,5 +77,6 @@ grails.project.dependency.resolution = {
         }
         //Database Migration Plugin
         runtime "org.grails.plugins:database-migration:1.4.1"
+        compile "org.grails.plugins:remote-pagination:0.4.8"
     }
 }

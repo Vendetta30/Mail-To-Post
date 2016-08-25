@@ -1,5 +1,6 @@
 package vo
 
+import com.springSecurity.User
 import org.codehaus.groovy.grails.validation.Validateable
 
 @Validateable
@@ -10,6 +11,7 @@ class EmailVO {
     String sentDate
     String subject
     String messageBody
+    User user
     boolean checked = false
     List<String> attachmentType = []
     List<InputStream> inputStream = []
@@ -17,6 +19,7 @@ class EmailVO {
     List<String> attachmentNames = []
 
     static constraints = {
+        user(nullable: false)
         messagId(nullable: false)
         senderName(nullable: false)
         senderEmail(nullable: false)

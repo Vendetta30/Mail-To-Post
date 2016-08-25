@@ -7,32 +7,37 @@ import com.springSecurity.Role
 import com.springSecurity.User
 import common.AppUtil
 import enums.EmailPriority
+import grails.converters.JSON
 import grails.plugin.springsecurity.annotation.Secured
 
 @Secured(['ROLE_ADMIN', 'ROLE_SUBADMIN'])
 class EmailController {
 
     def emailService
-    def springSecurityService
     def bindingService
 
     def index() {
-        User user = springSecurityService.currentUser
-        println("user ${user}")
-        List<Role> roles = user.getAuthorities().toList()
-        println("roles ${roles}")
-        roles.each { print it }
-        render(view: 'index')
+        params.max = Math.min(params.max ? params.int('max') : 10, 100)
+        render(view: 'index', model: [emailInstanceList: Email.list(max: params.int('max'), offset: 0), emailInstanceTotal: Email.count()])
+    }
+
+    def filter() {
+        params.max = Math.min(params.max ? params.int('max') : 10, 100)
+        render(template: 'filter', model: [emailInstanceList: Email.list(params), emailInstanceTotal: Email.count()])
     }
 
     def refreshEmail() {
+        def data = [:]
+        data.success = "Success"
         emailService.readMail()
+        render data as JSON
     }
-    def save(EmailCO emailCO,Long userId) {
+
+    def save(EmailCO emailCO, Long userId) {
         String message
         User user = User.findById(userId)
         if (emailCO.validate()) {
-            Email email = bindingService.bindingEmailCoToEmail(emailCO,user)
+            Email email = bindingService.bindingEmailCoToEmail(emailCO, user)
             if (email.validate()) {
                 AppUtil.save(email)
                 message = "Email saved successfully . . ."

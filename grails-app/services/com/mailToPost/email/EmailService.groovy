@@ -2,6 +2,7 @@ package com.mailToPost.email
 
 import com.mailToPost.Attachments
 import com.mailToPost.Email
+import com.springSecurity.User
 import common.AppUtil
 import grails.transaction.Transactional
 import org.codehaus.groovy.grails.web.context.ServletContextHolder
@@ -47,7 +48,7 @@ class EmailService {
             store.connect("imap.gmail.com", username, password);
             Folder inbox = store.getFolder("INBOX");
             inbox.open(Folder.READ_ONLY);
-            SearchTerm newerThan = new ReceivedDateTerm(ComparisonTerm.GT, new Date() - 2);
+            SearchTerm newerThan = new ReceivedDateTerm(ComparisonTerm.GT, new Date() - 1);
             List messages = inbox.search(newerThan);
             log.info("//////////fetchUnreadMail/////populating to VO///earlier//${messages?.size()}////")
 
@@ -64,13 +65,10 @@ class EmailService {
 
         println("////////started saving//////mail//")
         emailVOs.eachWithIndex { EmailVO emailVO, int i2 ->
-            println("Email MessageId ${emailVO?.messagId}")
-            if (emailVO?.messagId == "fe5325\$qqqlpq@mgw07.tbsl.in") {
-                println(emailVO?.senderEmail)
-            }
             Email unreadMail = Email.findByMessagId(emailVO?.messagId)
             if (!unreadMail) {
                 unreadMail = new Email(emailVO)
+                unreadMail.user = User.findByUsername(emailVO?.senderEmail) ?: User.findByUsername("system@mailtopost.in")
                 if (unreadMail.validate()) {
                     unreadMail.save(flush: true)
                     saveEmailAttachment(emailVO, unreadMail)
