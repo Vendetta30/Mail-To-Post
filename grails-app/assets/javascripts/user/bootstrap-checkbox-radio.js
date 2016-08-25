@@ -66,14 +66,14 @@
         , data = $this.data('checkbox')
         , options = $.extend({}, $.fn.checkbox.defaults, $this.data(), typeof option == 'object' && option);
       if (!data) $this.data('checkbox', (data = new Checkbox(this, options)));
-      if (option == 'toggle') data.toggle()
-      if (option == 'check' || option == 'uncheck') data.setCheck(option)
+      if (option == 'toggle') data.toggle();
+      if (option == 'check' || option == 'uncheck') data.setCheck(option);
       else if (option) data.setState();
     });
   }
 
   $.fn.checkbox.defaults = {
-    template: '<span class="icons"><span class="first-icon fa fa-square fa-base"></span><span class="second-icon fa fa-check-square fa-base"></span></span>'
+    template: '<span class="icons"></span>'
   }
 
 
