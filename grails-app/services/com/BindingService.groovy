@@ -24,6 +24,7 @@ class BindingService {
         letter.letterMatter = letterCO.letterMatter
         letter.letterHeader = letterCO.letterHeader
         letter.letterFooter = letterCO.letterFooter
+        letter.status = letterCO.status
 
         letterPost.colorForEnvelope = letterPostCO.colorForEnvelope
         letterPost.envelopeQuality = letterPostCO.envelopeQuality

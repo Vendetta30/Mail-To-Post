@@ -1,5 +1,7 @@
 package com.mailToPost
 
+import enums.LetterDeliveryStatus
+
 class Letter {
 
     String letterFrom
@@ -7,6 +9,7 @@ class Letter {
     String letterMatter
     String letterHeader
     String letterFooter
+    LetterDeliveryStatus status = LetterDeliveryStatus.WAITING
     Date dateCreated
     Date lastUpdated
 
