@@ -3,6 +3,7 @@ package com.springSecurity
 import com.mailToPost.Address
 import com.mailToPost.AddressBook
 import com.mailToPost.AdminSetting
+import com.mailToPost.Email
 import com.mailToPost.Notification
 import co.RegisterCO
 import groovy.transform.EqualsAndHashCode
@@ -26,7 +27,7 @@ class User implements Serializable {
     boolean passwordExpired
     AdminSetting adminSetting
 
-    static hasMany = [addresses: Address, addressBooks: AddressBook, notifications: Notification]
+    static hasMany = [addresses: Address, addressBooks: AddressBook, notifications: Notification, emails: Email]
 
     User(String username, String password) {
         this()

@@ -9,7 +9,7 @@
     <meta name="robots" content="all,follow">
     <meta name="googlebot" content="index,follow,snippet,archive">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IT Worker | responsive portfolio template</title>
+    <title><g:layoutTitle/></title>
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100"
           rel="stylesheet" type="text/css">
     <meta name="keywords" content="">
@@ -43,7 +43,7 @@
                 <li><a href="${createLink(uri: '/')}#references">My work</a></li>
                 <li><a href="${createLink(uri: '/')}#customers">Clients</a></li>
                 <li><a href="${createLink(uri: '/')}#contact">Contact</a></li>
-                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">Login</a></li>
+                <li><a href="javascript:void(0)" onclick="showLoginForm()">Login</a></li>
             </ul>
         </div>
     </div>
@@ -82,25 +82,10 @@
         </div>
     </div>
 </div>
-<button type="button" class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#style-switch"
-        id="style-switch-button">
-    <i class="fa fa-adjust"></i>
-</button>
-
-<div id="style-switch" class="collapse">
-    <h4>Select theme colour</h4>
-
-    <form>
-        <select class="form-control" name="colour" id="colour">
-            <option value="">select colour</option>
-            <option value="default">turquoise</option>
-            <option value="red">red</option>
-            <option value="pink">pink</option>
-            <option value="green">green</option>
-            <option value="blue">blue</option>
-            <option value="violet">violet</option>
-        </select>
-    </form>
-</div>
+<script>
+    function showLoginForm() {
+        $("#login-overlay").modal("toggle");
+    }
+</script>
 </body>
 </html>

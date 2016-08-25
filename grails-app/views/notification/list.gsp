@@ -1,7 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <meta name="layout" content="user"/>
+    <sec:ifNotLoggedIn>
+        <meta name="layout" content="main">
+    </sec:ifNotLoggedIn>
+    <sec:ifLoggedIn>
+        <sec:ifAllGranted roles="ROLE_USER">
+            <meta name="layout" content="user">
+        </sec:ifAllGranted>
+        <sec:ifAllGranted roles="ROLE_ADMIN,ROLE_SUB_ADMIN">
+            <meta name="layout" content="admin">
+        </sec:ifAllGranted>
+    </sec:ifLoggedIn>
     <title>Paper Dashboard by Creative Tim</title>
 </head>
 

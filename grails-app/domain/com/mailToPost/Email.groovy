@@ -1,5 +1,6 @@
 package com.mailToPost
 
+import com.springSecurity.User
 import vo.EmailVO
 
 class Email {
@@ -14,15 +15,16 @@ class Email {
     Date lastUpdated
     boolean checked = false
 
+    static belongsTo = [user: User]
     static hasMany = [attachments: Attachments, letters: Letter]
 
     static constraints = {
-        messagId(nullable: false,blank: false)
-        senderName(nullable: false,blank: false)
-        senderEmail(nullable: false,blank: false)
-        messageSentDate(nullable: false,blank: false)
-        messageSubject(nullable: true,blank: true)
-        messageBody(nullable: true,blank: true)
+        messagId(nullable: false, blank: false)
+        senderName(nullable: false, blank: false)
+        senderEmail(nullable: false, blank: false)
+        messageSentDate(nullable: false, blank: false)
+        messageSubject(nullable: true, blank: true)
+        messageBody(nullable: true, blank: true)
         emailType(nullable: true)
     }
     static mapping = {

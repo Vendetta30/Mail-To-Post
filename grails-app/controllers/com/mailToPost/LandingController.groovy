@@ -17,12 +17,12 @@ class LandingController {
         List<Role> roles = user.getAuthorities().toList()
         println("roles ${roles}")
         roles.each { print it }
-        if (roles.authority.contains("ROLE_ADMIN")) {
-            redirect(controller: "admin", action: "index")
-        } else if (roles.authority.contains("ROLE_SUBADMIN")) {
-            redirect(controller: "subAdmin", action: "index")
-        } else if (roles.authority.contains("ROLE_USER")) {
+        if (roles.authority.contains("ROLE_USER")) {
             redirect(controller: "user", action: "index")
+        } else if (roles.authority.contains("ROLE_ADMIN") || roles.authority.contains("ROLE_SUBADMIN")) {
+            redirect(controller: "admin", action: "index")
+        } else {
+            redirect(uri: '/')
         }
     }
 }

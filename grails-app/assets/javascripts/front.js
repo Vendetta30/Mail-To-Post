@@ -13,7 +13,7 @@ $(function () {
     // map();
     counters();
     parallax();
-    demo();
+    // demo();
 });
 
 $(window).load(function () {
