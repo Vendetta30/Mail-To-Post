@@ -1,105 +1,53 @@
 package com.mailToPost
 
+import co.LetterCO
+import co.LetterPostCO
+import com.BindingService
+import common.AppUtil
+import enums.EnvelopeColor
+import enums.EnvelopeQuality
+import enums.PaperSheetQuality
 import grails.plugin.springsecurity.annotation.Secured
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
 @Secured(['ROLE_USER', 'ROLE_ADMIN', 'ROLE_SUBADMIN'])
 class LetterController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    BindingService bindingService
 
-    def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond Letter.list(params), model:[letterInstanceCount: Letter.count()]
-    }
-
-    def show(Letter letterInstance) {
-        respond letterInstance
-    }
-
-    def create() {
-        respond new Letter(params)
-    }
-
-    @Transactional
-    def save(Letter letterInstance) {
-        if (letterInstance == null) {
-            notFound()
-            return
-        }
-
-        if (letterInstance.hasErrors()) {
-            respond letterInstance.errors, view:'create'
-            return
-        }
-
-        letterInstance.save flush:true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'letter.label', default: 'Letter'), letterInstance.id])
-                redirect letterInstance
+    def save(LetterCO letterCO, LetterPostCO letterPostCO, Long emailId) {
+        String message
+        if (letterPostCO.validate()) {
+            Letter letter = bindingService.bindLetterCoToLetter(letterCO, letterPostCO)
+            Email email = Email.findById(emailId)
+            letter.email = email
+            if (letter.validate()) {
+                AppUtil.save(letter)
+                message = "Letter is Successfully saved.."
+            } else {
+                message = "Letter details are not verified.. ${letter.errors.allErrors}"
             }
-            '*' { respond letterInstance, [status: CREATED] }
+        } else {
+            message = "LetterPost details not verified.."
         }
+        render "${message}"
     }
 
-    def edit(Letter letterInstance) {
-        respond letterInstance
+    def delete(Long letterId){
+        String message
+        Letter letter = Letter.findById(letterId)
+        if(letter){
+            letter.delete(flush: true)
+            message = "Letter deleted Successfully . . ."
+        }else{
+            message ="Letter could not found . . ."
+        }
+        render "${message}"
     }
 
-    @Transactional
-    def update(Letter letterInstance) {
-        if (letterInstance == null) {
-            notFound()
-            return
-        }
-
-        if (letterInstance.hasErrors()) {
-            respond letterInstance.errors, view:'edit'
-            return
-        }
-
-        letterInstance.save flush:true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'Letter.label', default: 'Letter'), letterInstance.id])
-                redirect letterInstance
-            }
-            '*'{ respond letterInstance, [status: OK] }
-        }
-    }
-
-    @Transactional
-    def delete(Letter letterInstance) {
-
-        if (letterInstance == null) {
-            notFound()
-            return
-        }
-
-        letterInstance.delete flush:true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Letter.label', default: 'Letter'), letterInstance.id])
-                redirect action:"index", method:"GET"
-            }
-            '*'{ render status: NO_CONTENT }
-        }
-    }
-
-    protected void notFound() {
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.not.found.message', args: [message(code: 'letter.label', default: 'Letter'), params.id])
-                redirect action: "index", method: "GET"
-            }
-            '*'{ render status: NOT_FOUND }
-        }
+    def update(LetterCO letterCO,LetterPostCO letterPostCO,Email email){
+    redirect(action: "save",params: [letterCO:letterCO,letterPostCO:letterPostCO,emailId:email ])
     }
 }
