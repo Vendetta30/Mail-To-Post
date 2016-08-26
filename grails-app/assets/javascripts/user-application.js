@@ -12,6 +12,8 @@
 //= require user/bootstrap-notify.js
 //= require user/paper-dashboard.js
 //= require user/demo.js
+//= require jplist.js
+//= require jplist.min.js
 //= require_tree .
 //= require_self
 
