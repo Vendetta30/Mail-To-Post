@@ -88,6 +88,11 @@ grails.hibernate.osiv.readonly = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        rabbitmq {
+            connection = {
+                connection host: "localhost", username: "guest", password: "guest"
+            }
+        }
     }
     production {
         grails.logging.jul.usebridge = false
@@ -133,6 +138,14 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         '/**/fonts/**'   : ['permitAll'],
         '/**/favicon.ico': ['permitAll']
 ]
+//DataBase Migration Plugin
 grails.plugin.databasemigration.updateOnStart = true
 grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.groovy']
+
+//RabbitMQ Plugin
+rabbitmq {
+    queues = {
+        queue name: "testqueue"
+    }
+}
 

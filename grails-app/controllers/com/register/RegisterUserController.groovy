@@ -7,8 +7,11 @@ import grails.plugin.springsecurity.annotation.Secured
 class RegisterUserController {
 
     def registerUserService
+    def createUserService
 
-    def index() {}
+    def index() {
+        createUserService.createUser()
+    }
 
     def register(RegisterCO registerCO) {
         println(params)
@@ -18,10 +21,9 @@ class RegisterUserController {
             render view: "/login/auth"
 
 
-        }
-        else {
-            registerCO.errors.each {print it}
-            render view:"/login/auth",model: [error:registerCO.errors]
+        } else {
+            registerCO.errors.each { print it }
+            render view: "/login/auth", model: [error: registerCO.errors]
         }
     }
 }

@@ -78,5 +78,7 @@ grails.project.dependency.resolution = {
         //Database Migration Plugin
         runtime "org.grails.plugins:database-migration:1.4.1"
         compile "org.grails.plugins:remote-pagination:0.4.8"
+        compile "org.grails.plugins:rabbitmq-native:3.1.3"
+        compile "org.grails.plugins:lorem-ipsum-generator:1.0"
     }
 }

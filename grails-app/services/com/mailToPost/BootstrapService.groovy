@@ -8,8 +8,8 @@ import com.springSecurity.UserRole
 import enums.EmailPriority
 import grails.transaction.Transactional
 
-@Transactional
 class BootstrapService {
+    static transactional = false
 
     public void createRoles() {
         Role.findByAuthority("ROLE_ADMIN") ?: new Role(authority: "ROLE_ADMIN").save(flush: true, failOnError: true)
@@ -50,7 +50,7 @@ class BootstrapService {
     public void createEmail() {
         User user = User.findByUsername("system@mailtopost.in")
         Email email = new Email(messagId: "MSG_001", senderName: "Yashwant Singh", senderEmail: "vijay@nexthoughts.com",
-                messageSentDate: new Date().toString(), checked: true,user:user)
+                messageSentDate: new Date().toString(), checked: true, user: user)
         if (email.validate()) {
             email.save(flush: true)
             println "====<><><><><>   Email saved successfully . . ."
