@@ -1,5 +1,6 @@
 package co
 
+import enums.LetterDeliveryStatus
 import grails.validation.Validateable
 
 @Validateable
@@ -9,6 +10,7 @@ class LetterCO {
     String letterMatter
     String letterHeader
     String letterFooter
+    LetterDeliveryStatus status
     Date dateCreated
     Date lastUpdated
 
