@@ -3,6 +3,8 @@ package com
 import co.EmailCO
 import co.LetterCO
 import co.LetterPostCO
+import co.UserCO
+import com.mailToPost.AdminSetting
 import com.mailToPost.Email
 import com.mailToPost.EmailType
 import com.mailToPost.Letter
@@ -22,6 +24,7 @@ class BindingService {
         letter.letterMatter = letterCO.letterMatter
         letter.letterHeader = letterCO.letterHeader
         letter.letterFooter = letterCO.letterFooter
+        letter.status = letterCO.status
 
         letterPost.colorForEnvelope = letterPostCO.colorForEnvelope
         letterPost.envelopeQuality = letterPostCO.envelopeQuality
@@ -49,5 +52,23 @@ class BindingService {
         email.emailType = emailType
 
         return email
+    }
+
+    def bindingUserCoToUser(UserCO userCO) {
+        User user = new User()
+        AdminSetting adminSetting = new AdminSetting()
+
+        user.username = userCO.username
+        user.password = userCO.password
+        user.firstName = userCO.firstName
+        user.lastName = userCO.lastName
+        user.enabled = userCO.enabled
+        user.accountExpired = userCO.accountExpired
+        user.accountLocked = userCO.accountLocked
+        user.passwordExpired = userCO.passwordExpired
+        adminSetting = userCO.adminSetting
+        user.adminSetting = adminSetting
+
+        return user
     }
 }
