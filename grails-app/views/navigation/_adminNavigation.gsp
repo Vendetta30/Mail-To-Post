@@ -7,12 +7,16 @@
             <div class="clearfix"></div>
             <li class="${(params.controller == 'email' && params.action == 'index') ? 'active' : ''}">
                 <a href="${createLink(controller: 'email', action: 'index')}">
-                    <i class="fa fa-envelope-o">
-                        <div class="icon-bg bg-primary"></div>
-                    </i>
+                    <i class="fa fa-envelope-o"></i>
                     <span class="menu-title">Email</span>
                 </a>
 
+            </li>
+            <li class="${(params.controller == 'letter' && params.action == 'index') ? 'active' : ''}">
+                <a href="${createLink(controller: 'letter', action: 'index')}">
+                    <i class="fa  fa-file-o"></i>
+                    <span class="menu-title">Letter</span>
+                </a>
             </li>
         </ul>
     </div>
