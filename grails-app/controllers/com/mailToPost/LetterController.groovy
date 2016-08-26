@@ -17,6 +17,16 @@ class LetterController {
 
     BindingService bindingService
 
+    def index() {
+        params.max = Math.min(params.max ? params.int('max') : 10, 100)
+        render(view: 'index', model: [letterInstanceList: Letter.list(max: params.int('max'), offset: 0), letterInstanceTotal: Letter.count()])
+    }
+
+    def filter() {
+        params.max = Math.min(params.max ? params.int('max') : 10, 100)
+        render(template: 'letterList', model: [letterInstanceList: Email.list(params), letterInstanceTotal: Email.count()])
+    }
+
     def save(LetterCO letterCO, LetterPostCO letterPostCO, Long emailId) {
         String message
         if (letterPostCO.validate()) {
@@ -35,19 +45,19 @@ class LetterController {
         render "${message}"
     }
 
-    def delete(Long letterId){
+    def delete(Long letterId) {
         String message
         Letter letter = Letter.findById(letterId)
-        if(letter){
+        if (letter) {
             letter.delete(flush: true)
             message = "Letter deleted Successfully . . ."
-        }else{
-            message ="Letter could not found . . ."
+        } else {
+            message = "Letter could not found . . ."
         }
         render "${message}"
     }
 
-    def update(LetterCO letterCO,LetterPostCO letterPostCO,Email email){
-    redirect(action: "save",params: [letterCO:letterCO,letterPostCO:letterPostCO,emailId:email ])
+    def update(LetterCO letterCO, LetterPostCO letterPostCO, Email email) {
+        redirect(action: "save", params: [letterCO: letterCO, letterPostCO: letterPostCO, emailId: email])
     }
 }
