@@ -1,6 +1,7 @@
 package com.register
 
 import co.RegisterCO
+import com.NonsenseGenerator
 import grails.plugin.springsecurity.annotation.Secured
 
 @Secured("permitAll")
@@ -11,6 +12,10 @@ class RegisterUserController {
 
     def index() {
         createUserService.createUser()
+    }
+
+    def generateRandomComment() {
+        render createUserService.generateComments("")
     }
 
     def register(RegisterCO registerCO) {

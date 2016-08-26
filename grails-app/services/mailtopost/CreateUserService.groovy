@@ -1,5 +1,6 @@
 package mailtopost
 
+import com.NonsenseGenerator
 import com.springSecurity.Role
 import com.springSecurity.User
 import com.springSecurity.UserRole
@@ -50,5 +51,16 @@ class CreateUserService {
             user.save()
             UserRole.create(user, role, false)
         }
+    }
+
+    String generateComments(String comments) {
+        NonsenseGenerator generator = NonsenseGenerator.instance
+        comments = generator.makeSentence(true)
+        String withoutSpace = comments
+        while (comments.length() < 300) {
+            println("comments ${comments}")
+            comments += generator.makeSentence(false) + ". "
+        }
+        comments
     }
 }
