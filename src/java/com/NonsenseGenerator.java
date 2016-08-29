@@ -48,19 +48,10 @@ public class NonsenseGenerator {
         mRandom = new Random();
     }
 
-    /**
-     * Produces something that reads like a headline.
-     */
     public String makeHeadline() {
         return makeSentence(true);
     }
 
-    /**
-     * Produces a sentence.
-     *
-     * @param isHeadline whether the sentence should look like a headline or not.
-     * @return the generated sentence.
-     */
     public String makeSentence(boolean isHeadline) {
         List<String> words = new ArrayList<String>();
         generateSentence(words, isHeadline);
@@ -68,12 +59,6 @@ public class NonsenseGenerator {
         return joinWords(words);
     }
 
-    /**
-     * Produces news article text.
-     *
-     * @param numSentences how many sentences the text is to contain.
-     * @return the generated text.
-     */
     public String makeText(int numSentences) {
         StringBuilder sb = new StringBuilder();
         while (numSentences-- > 0) {
@@ -85,12 +70,6 @@ public class NonsenseGenerator {
         return sb.toString();
     }
 
-    /**
-     * Generates a sentence.
-     *
-     * @param words      the list of words to which the sentence will be appended.
-     * @param isHeadline whether the sentence must look like a headline or not.
-     */
     private void generateSentence(List<String> words, boolean isHeadline) {
         if (!isHeadline && mRandom.nextInt(4) == 0)
             generateTimeClause(words, isHeadline);
