@@ -139,8 +139,9 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         '/**/favicon.ico': ['permitAll']
 ]
 //DataBase Migration Plugin
+grails.plugin.databasemigration.changelogFileName = 'changelog.xml'
 grails.plugin.databasemigration.updateOnStart = true
-grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.groovy']
+grails.plugin.databasemigration.updateOnStartFileNames = ['changelog.xml']
 
 //RabbitMQ Plugin
 rabbitmq {

@@ -1,12 +1,9 @@
 package com.mailToPost
 
-import com.mailToPost.Email
-import com.mailToPost.EmailType
 import com.springSecurity.Role
 import com.springSecurity.User
 import com.springSecurity.UserRole
 import enums.EmailPriority
-import grails.transaction.Transactional
 
 class BootstrapService {
     static transactional = false
@@ -25,7 +22,6 @@ class BootstrapService {
             User userAdmin = new User(username: "admin@gmail.com", password: "123456", firstName: "admin_first", lastName: "admin_last")
             userAdmin.save(flush: true, failOnError: true)
             UserRole.create(userAdmin, adminRole, true)
-            UserRole.create(userAdmin, userRole, true)
             UserRole.create(userAdmin, subAdminRole, true)
         }
 
@@ -42,6 +38,7 @@ class BootstrapService {
         Role subAdminRole = Role.findByAuthority("ROLE_SUBADMIN")
         if (!User.findByUsername("subadmin@gmail.com")) {
             User userSubAdmin = new User(username: "subadmin@gmail.com", password: "123456", firstName: "subadmin_first", lastName: "subadmin_last")
+            userSubAdmin.accountLocked = true
             userSubAdmin.save(flush: true, failOnError: true)
             UserRole.create(userSubAdmin, subAdminRole, true)
         }
@@ -63,7 +60,6 @@ class BootstrapService {
             println "====<><><><><>   EmailType got saved successfully . . ."
         } else {
             println "######Error at EmailType######"
-
         }
     }
 }
