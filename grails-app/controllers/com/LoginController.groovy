@@ -15,7 +15,7 @@
 package com
 
 import com.google.gson.Gson
-import com.mailToPost.GoogleResults
+
 import com.springSecurity.User
 import grails.converters.JSON
 import org.codehaus.groovy.grails.plugins.web.taglib.ApplicationTagLib
@@ -37,32 +37,4 @@ class LoginController extends grails.plugin.springsecurity.LoginController {
         }
         render([success: true, username: springSecurityService.authentication.name] << (redirect ? [redirect: redirect] : [:]) as JSON)
     }
-
-    def googleSearch = {
-        render(view: 'googleSearchApi')
-    }
-
-    def javaAPi = {
-
-        String address = "http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=";
-        String query = "programcreek";
-        String charset = "UTF-8";
-
-        URL url = new URL(address + URLEncoder.encode(query, charset));
-        Reader reader = new InputStreamReader(url.openStream(), charset);
-        GoogleResults results = new GoogleResults()
-        results = new Gson().fromJson(reader, GoogleResults.class);
-        println("==========Reults===========${results}")
-        int total = results.getResponseData().getResults().size();
-        System.out.println("total: " + total);
-
-        // Show title and URL of each results
-        for (int i = 0; i <= total - 1; i++) {
-            System.out.println("Title: " + results.getResponseData().getResults().get(i).getTitle());
-            System.out.println("URL: " + results.getResponseData().getResults().get(i).getUrl() + "\n");
-
-        }
-
-    }
 }
-
