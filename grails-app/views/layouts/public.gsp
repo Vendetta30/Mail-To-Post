@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <asset:stylesheet src="public/public-application.css"/>
-    <asset:javascript src="public/public-application.js"/>
-    <link rel="shortcut icon" href="${assetPath(src: 'favicon.png')}" type="image/x-icon">
-    <link rel="stylesheet" href="${resource(dir: 'css', file: 'font-awesome.css')}">
     <title>Nantes - Onepage Business Template</title>
+    <link href="${resource(dir: 'css/public', file: 'bootstrap.min.css')}" rel="stylesheet">
+    <link href="${resource(dir: 'css', file: 'font-awesome.css')}" rel="stylesheet">
+    <link href="${resource(dir: 'css/public', file: 'owl.carousel.css')}" rel="stylesheet">
+    <link href="${resource(dir: 'css/public', file: 'owl.theme.default.min.css')}" rel="stylesheet">
+    <link href="${resource(dir: 'css/public', file: 'animate.css')}" rel="stylesheet">
+    <link href="${resource(dir: 'css/public', file: 'style.css')}" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -24,8 +26,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">
-                <asset:image src="logo.png" alt="Sanza theme logo"/>
+            <a class="navbar-brand page-scroll" href="#page-top"><img
+                    src="${resource(dir: 'images/public', file: 'logo.png')}" alt="Sanza theme logo"></a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -58,6 +60,69 @@
         </div>
     </div>
 </nav>
+<header>
+    <div class="container-fluid">
+        <div class="slider-container">
+
+            <div class="owl-slider owl-carousel">
+                <div class="item">
+                    <div class="owl-slider-item">
+                        <img src="${resource(dir: 'images/public/demo', file: 'slider-1.jpg')}" class="img-responsive"
+                             alt="portfolio">
+
+                        <div class="intro-text">
+                            <div class="intro-lead-in">We are the number one</div>
+
+                            <div class="intro-heading">Design & Development Agency</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="owl-slider-item">
+                        <img src="${resource(dir: 'images/public/demo', file: 'slider-1.jpg')}" class="img-responsive"
+                             alt="portfolio">
+
+                        <div class="intro-text">
+                            <div class="intro-lead-in">We are the number one</div>
+
+                            <div class="intro-heading">Design & Development Agency</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="owl-slider-item">
+                        <img src="${resource(dir: 'images/public/demo', file: 'slider-1.jpg')}" class="img-responsive"
+                             alt="portfolio">
+
+                        <div class="intro-text">
+                            <div class="intro-lead-in">We are the number one</div>
+
+                            <div class="intro-heading">Design & Development Agency</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<section class="section-cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>This is Call To Action module. One click and template is yours.</h2>
+            </div>
+
+            <div class="col-md-4">
+                <a href="#" class="button-cta">DOWNLOAD</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="about" class="light-bg">
     <div class="container">
         <div class="row">
@@ -260,7 +325,8 @@
             <div class="col-md-4 col-0-gutter">
                 <div class="ot-portfolio-item">
                     <figure class="effect-bubba">
-                        <asset:image src="demo/portfolio-1.jpg" alt="img02" class="img-responsive"/>
+                        <img src="${resource(dir: 'images/public/demo', file: 'portfolio-1.jpg')}" alt="img02"
+                             class="img-responsive"/>
                         <figcaption>
                             <h2>Dean & Letter</h2>
 
@@ -275,7 +341,8 @@
             <div class="col-md-4 col-0-gutter">
                 <div class="ot-portfolio-item">
                     <figure class="effect-bubba">
-                        <asset:image src="demo/portfolio-2.jpg" alt="img02" class="img-responsive"/>
+                        <img src="${resource(dir: 'images/public/demo', file: 'portfolio-2.jpg')}" alt="img02"
+                             class="img-responsive"/>
                         <figcaption>
                             <h2>Startup Framework</h2>
 
@@ -290,7 +357,8 @@
             <div class="col-md-4 col-0-gutter">
                 <div class="ot-portfolio-item">
                     <figure class="effect-bubba">
-                        <asset:image src="demo/portfolio-3.jpg" alt="img02" class="img-responsive"/>
+                        <img src="${resource(dir: 'images/public/demo', file: 'portfolio-3.jpg')}" alt="img02"
+                             class="img-responsive"/>
                         <figcaption>
                             <h2>Lamp & Velvet</h2>
 
@@ -308,7 +376,8 @@
             <div class="col-md-4 col-0-gutter">
                 <div class="ot-portfolio-item">
                     <figure class="effect-bubba">
-                        <asset:image src="demo/portfolio-4.jpg" alt="img02" class="img-responsive"/>
+                        <img src="${resource(dir: 'images/public/demo', file: 'portfolio-4.jpg')}" alt="img02"
+                             class="img-responsive"/>
                         <figcaption>
                             <h2>Smart Name</h2>
 
@@ -323,7 +392,8 @@
             <div class="col-md-4 col-0-gutter">
                 <div class="ot-portfolio-item">
                     <figure class="effect-bubba">
-                        <asset:image src="demo/portfolio-5.jpg" alt="img02" class="img-responsive"/>
+                        <img src="${resource(dir: 'images/public/demo', file: 'portfolio-5.jpg')}" alt="img02"
+                             class="img-responsive"/>
                         <figcaption>
                             <h2>Fast People</h2>
 
@@ -338,7 +408,8 @@
             <div class="col-md-4 col-0-gutter">
                 <div class="ot-portfolio-item">
                     <figure class="effect-bubba">
-                        <asset:image src="demo/portfolio-6.jpg" alt="img02" class="img-responsive"/>
+                        <img src="${resource(dir: 'images/public/demo', file: 'portfolio-6.jpg')}" alt="img02"
+                             class="img-responsive"/>
                         <figcaption>
                             <h2>Kites & Stars</h2>
 
@@ -403,39 +474,57 @@
             <div class="col-lg-12 text-center">
                 <div class="owl-partners owl-carousel">
                     <div class="item">
-                        <div class="partner-logo"><asset:image src="demo/partners-1.png" alt="partners"/></div>
+                        <div class="partner-logo"><img
+                                src="${resource(dir: 'images/public/demo', file: 'partners-1.png')}" alt="partners">
+                        </div>
                     </div>
 
                     <div class="item">
-                        <div class="partner-logo"><asset:image src="demo/partners-2.png" alt="partners"/></div>
+                        <div class="partner-logo"><img
+                                src="${resource(dir: 'images/public/demo', file: 'partners-2.png')}" alt="partners">
+                        </div>
                     </div>
 
                     <div class="item">
-                        <div class="partner-logo"><asset:image src="demo/partners-3.png" alt="partners"/></div>
+                        <div class="partner-logo"><img
+                                src="${resource(dir: 'images/public/demo', file: 'partners-3.png')}" alt="partners">
+                        </div>
                     </div>
 
                     <div class="item">
-                        <div class="partner-logo"><asset:image src="demo/partners-4.png" alt="partners"/></div>
+                        <div class="partner-logo"><img
+                                src="${resource(dir: 'images/public/demo', file: 'partners-4.png')}" alt="partners">
+                        </div>
                     </div>
 
                     <div class="item">
-                        <div class="partner-logo"><asset:image src="demo/partners-5.png" alt="partners"/></div>
+                        <div class="partner-logo"><img
+                                src="${resource(dir: 'images/public/demo', file: 'partners-5.png')}" alt="partners">
+                        </div>
                     </div>
 
                     <div class="item">
-                        <div class="partner-logo"><asset:image src="demo/partners-6.png" alt="partners"/></div>
+                        <div class="partner-logo"><img
+                                src="${resource(dir: 'images/public/demo', file: 'partners-6.png')}" alt="partners">
+                        </div>
                     </div>
 
                     <div class="item">
-                        <div class="partner-logo"><asset:image src="demo/partners-7.png" alt="partners"/></div>
+                        <div class="partner-logo"><img
+                                src="${resource(dir: 'images/public/demo', file: 'partners-7.png')}" alt="partners">
+                        </div>
                     </div>
 
                     <div class="item">
-                        <div class="partner-logo"><asset:image src="demo/partners-8.png" alt="partners"/></div>
+                        <div class="partner-logo"><img
+                                src="${resource(dir: 'images/public/demo', file: 'partners-8.png')}" alt="partners">
+                        </div>
                     </div>
 
                     <div class="item">
-                        <div class="partner-logo"><asset:image src="demo/partners-9.png" alt="partners"/></div>
+                        <div class="partner-logo"><img
+                                src="${resource(dir: 'images/public/demo', file: 'partners-9.png')}" alt="partners">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -459,7 +548,8 @@
             <div class="col-md-4">
                 <div class="team-item">
                     <div class="team-image">
-                        <asset:image src="demo/author-2.jpg" class="img-responsive" alt="author"/>
+                        <img src="${resource(dir: 'images/public/demo', file: 'author-2.jpg')}" class="img-responsive"
+                             alt="author">
                     </div>
 
                     <div class="team-text">
@@ -483,7 +573,8 @@
             <div class="col-md-4">
                 <div class="team-item">
                     <div class="team-image">
-                        <asset:image src="demo/author-6.jpg" class="img-responsive" alt="author"/>
+                        <img src="${resource(dir: 'images/public/demo', file: 'author-6.jpg')}" class="img-responsive"
+                             alt="author">
                     </div>
 
                     <div class="team-text">
@@ -507,7 +598,8 @@
             <div class="col-md-4">
                 <div class="team-item">
                     <div class="team-image">
-                        <asset:image src="demo/author-4.jpg" class="img-responsive" alt="author"/>
+                        <img src="${resource(dir: 'images/public/demo', file: 'author-4.jpg')}" class="img-responsive"
+                             alt="author">
                     </div>
 
                     <div class="team-text">
@@ -650,7 +742,8 @@
             </div>
 
             <div class="modal-body">
-                <asset:image src="demo/portfolio-1.jpg" alt="img01" class="img-responsive"/>
+                <img src="${resource(dir: 'images/public/demo', file: 'portfolio-1.jpg')}" alt="img01"
+                     class="img-responsive"/>
 
                 <div class="modal-works"><span>Branding</span><span>Web Design</span></div>
 
@@ -675,7 +768,8 @@
             </div>
 
             <div class="modal-body">
-                <asset:image src="demo/portfolio-2.jpg" alt="img01" class="img-responsive"/>
+                <img src="${resource(dir: 'images/public/demo', file: 'portfolio-2.jpg')}" alt="img01"
+                     class="img-responsive"/>
 
                 <div class="modal-works"><span>Branding</span><span>Web Design</span></div>
 
@@ -700,7 +794,8 @@
             </div>
 
             <div class="modal-body">
-                <asset:image src="demo/portfolio-3.jpg" alt="img01" class="img-responsive"/>
+                <img src="${resource(dir: 'images/public/demo', file: 'portfolio-3.jpg')}" alt="img01"
+                     class="img-responsive"/>
 
                 <div class="modal-works"><span>Branding</span><span>Web Design</span></div>
 
@@ -725,7 +820,8 @@
             </div>
 
             <div class="modal-body">
-                <asset:image src="demo/portfolio-4.jpg" alt="img01" class="img-responsive"/>
+                <img src="${resource(dir: 'images/public/demo', file: 'portfolio-4.jpg')}" alt="img01"
+                     class="img-responsive"/>
 
                 <div class="modal-works"><span>Branding</span><span>Web Design</span></div>
 
@@ -750,7 +846,8 @@
             </div>
 
             <div class="modal-body">
-                <asset:image src="demo/portfolio-5.jpg" alt="img01" class="img-responsive"/>
+                <img src="${resource(dir: 'images/public/demo', file: 'portfolio-5.jpg')}" alt="img01"
+                     class="img-responsive"/>
 
                 <div class="modal-works"><span>Branding</span><span>Web Design</span></div>
 
@@ -763,5 +860,13 @@
         </div>
     </div>
 </div>
+<script src="${resource(dir: 'js/public', file: 'jQuery-2.1.4.min.js')}"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="${resource(dir: 'js/public', file: 'bootstrap.min.js')}"></script>
+<script src="${resource(dir: 'js/public', file: 'owl.carousel.min.js')}"></script>
+<script src="${resource(dir: 'js/public', file: 'cbpAnimatedHeader.js')}"></script>
+<script src="${resource(dir: 'js/public', file: 'jquery.appear.js')}"></script>
+<script src="${resource(dir: 'js/public', file: 'SmoothScroll.min.js')}"></script>
+<script src="${resource(dir: 'js/public', file: 'theme-scripts.js')}"></script>
 </body>
 </html>

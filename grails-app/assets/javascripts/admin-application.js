@@ -5,10 +5,10 @@
 // You're free to add application-wide JavaScript to this file, but it's generally better
 // to create separate JavaScript files as needed.
 //
-//= require jQuery-2.1.4.min.js
+//= require admin/jQuery-2.1.4.min.js
 //= require admin/jquery-migrate-1.2.1.min.js
 //= require admin/jquery-ui.js
-//= require bootstrap.min.js
+//= require admin/bootstrap.min.js
 //= require admin/bootstrap-hover-dropdown.js
 //= require admin/html5shiv.js
 //= require admin/respond.min.js
@@ -22,8 +22,8 @@
 //= require admin/holder.js
 //= require admin/responsive-tabs.js
 //= require admin/zabuto_calendar.min.js
-//= require jplist.js
-//= require jplist.min.js
+//= require admin/jplist.js
+//= require admin/jplist.min.js
 //= require_self
 
 if (typeof jQuery !== 'undefined') {
