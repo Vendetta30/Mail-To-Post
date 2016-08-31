@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="layout" content="main"/>
+    <meta name="layout" content="public"/>
     <title>Send Mail as Document</title>
 </head>
 
 <body>
-<div id="intro" class="clearfix">
+%{--<div id="intro" class="clearfix">
     <div class="item">
         <div class="container">
             <div class="row">
@@ -450,6 +450,6 @@
             </div>
         </div></div></div>
 
-<div class="section" id="map"></div>
+<div class="section" id="map"></div>--}%
 </body>
 </html>

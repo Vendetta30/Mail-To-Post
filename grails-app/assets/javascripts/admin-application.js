@@ -24,7 +24,6 @@
 //= require admin/zabuto_calendar.min.js
 //= require jplist.js
 //= require jplist.min.js
-//= require_tree .
 //= require_self
 
 if (typeof jQuery !== 'undefined') {

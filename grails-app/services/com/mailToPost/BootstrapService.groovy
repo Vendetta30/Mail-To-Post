@@ -28,6 +28,7 @@ class BootstrapService {
         if (!User.findByUsername("system@mailtopost.in")) {
             User userAdmin = new User(username: 'system@mailtopost.in', password: 'fgQ1crsdcx4scsdTYk&3mmmdmf', firstName: "System", lastName: 'MailToPost')
             userAdmin.save(flush: true, failOnError: true)
+            userAdmin.accountLocked = true
             UserRole.create(userAdmin, adminRole, true)
             UserRole.create(userAdmin, userRole, true)
             UserRole.create(userAdmin, subAdminRole, true)
@@ -38,7 +39,6 @@ class BootstrapService {
         Role subAdminRole = Role.findByAuthority("ROLE_SUBADMIN")
         if (!User.findByUsername("subadmin@gmail.com")) {
             User userSubAdmin = new User(username: "subadmin@gmail.com", password: "123456", firstName: "subadmin_first", lastName: "subadmin_last")
-            userSubAdmin.accountLocked = true
             userSubAdmin.save(flush: true, failOnError: true)
             UserRole.create(userSubAdmin, subAdminRole, true)
         }
