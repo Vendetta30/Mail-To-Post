@@ -1,4 +1,4 @@
-<%@ page import="com.mailToPost.Address" %>
+<%@ page import="com.mailToPost.customer.Address" %>
 <div class="fieldcontain ${hasErrors(bean: addressInstance, field: 'addressLine1', 'error')} required">
     <label for="addressLine1">
         <g:message code="address.addressLine1.label" default="Address Line1"/>

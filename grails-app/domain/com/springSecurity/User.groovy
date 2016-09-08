@@ -1,11 +1,12 @@
 package com.springSecurity
 
-import com.mailToPost.Address
+import com.mailToPost.customer.Address
 import com.mailToPost.AddressBook
 import com.mailToPost.AdminSetting
 import com.mailToPost.Email
 import com.mailToPost.Notification
 import co.RegisterCO
+import com.mailToPost.customer.Customer
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
 
@@ -26,8 +27,10 @@ class User implements Serializable {
     boolean accountLocked
     boolean passwordExpired
     AdminSetting adminSetting
-
-    static hasMany = [addresses: Address, addressBooks: AddressBook, notifications: Notification, emails: Email]
+    String uniqueToken = UUID.randomUUID().toString()
+    Boolean hasVerifiedEmail = false
+    Date whenEmailVerified
+    Customer customer
 
     User(String username, String password) {
         this()
@@ -66,6 +69,8 @@ class User implements Serializable {
         username blank: false, unique: true
         password blank: false
         adminSetting nullable: true
+        customer(nullable: true)
+        whenEmailVerified(nullable: true)
     }
 
     static mapping = {

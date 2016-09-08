@@ -53,14 +53,22 @@
                 <a href="#" class="list-group-item">
                     <input type="checkbox"/>
                     <span class="fa fa-star-o mrm mlm"></span>
+
                     <span style="min-width: 120px; display: inline-block;" class="name">
-                        ${fieldValue(bean: emailInstance, field: "senderName")}
+                        <mtp:showTextProperly max="10" text="${emailInstance?.senderName}"/>
                     </span>
-                    <span>${fieldValue(bean: emailInstance, field: "senderEmail")}</span>&nbsp; - &nbsp;
+
+                    <span>
+                        <mtp:showTextProperly max="20" text="${emailInstance?.senderEmail}"/>
+                    </span>
+                    &nbsp;&nbsp; - &nbsp;&nbsp;
+
                     <span style="font-size: 11px;" class="text-muted">
-                        ${fieldValue(bean: emailInstance, field: "messageSubject")}
+                        <mtp:showTextProperly max="70" text="${emailInstance?.messageSubject}"/>
                     </span>
-                    <span class="time-badge">${fieldValue(bean: emailInstance, field: "messageSentDate")}</span>
+                    <span class="time-badge">
+                        ${fieldValue(bean: emailInstance, field: "messageSentDate")}
+                    </span>
                     <span class="pull-right mrl">
                         <span class="fa fa-paperclip"></span>
                     </span>

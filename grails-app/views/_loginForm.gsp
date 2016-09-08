@@ -172,7 +172,7 @@
                         Forgot password?
                     </a>
                     &nbsp;&nbsp;
-                    <a href="#" class="forgot-password">
+                    <a href="${createLink(controller: 'registerUser', action: 'createUser')}" class="forgot-password">
                         New User
                     </a>
                 </div>

@@ -31,4 +31,8 @@ class RegisterUserController {
             render view: "/login/auth", model: [error: registerCO.errors]
         }
     }
+
+    def createUser() {
+        render(view: 'createUser')
+    }
 }

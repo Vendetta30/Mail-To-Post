@@ -1,5 +1,6 @@
 package com.mailToPost
 
+import com.mailToPost.customer.Address
 import grails.plugin.springsecurity.annotation.Secured
 
 import static org.springframework.http.HttpStatus.*

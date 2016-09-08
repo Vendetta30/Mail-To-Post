@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
-    <changeSet author="vijay (generated)" id="1472652882475-1">
+    <changeSet author="vijay (generated)" id="1473338222720-1">
         <createTable tableName="address">
             <column autoIncrement="true" name="id" type="bigint">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="addressPK"/>
@@ -14,10 +14,13 @@
             <column name="address_line2" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
+            <column name="address_type" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
             <column name="city" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="contact_id" type="bigint">
+            <column name="customer_id" type="bigint">
                 <constraints nullable="false"/>
             </column>
             <column name="date_created" type="datetime">
@@ -35,12 +38,9 @@
             <column name="street" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="user_id" type="bigint">
-                <constraints nullable="false"/>
-            </column>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-2">
+    <changeSet author="vijay (generated)" id="1473338222720-2">
         <createTable tableName="address_book">
             <column autoIncrement="true" name="id" type="bigint">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="address_bookPK"/>
@@ -62,7 +62,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-3">
+    <changeSet author="vijay (generated)" id="1473338222720-3">
         <createTable tableName="admin_setting">
             <column autoIncrement="true" name="id" type="bigint">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="admin_settingPK"/>
@@ -78,7 +78,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-4">
+    <changeSet author="vijay (generated)" id="1473338222720-4">
         <createTable tableName="attachments">
             <column autoIncrement="true" name="id" type="bigint">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="attachmentsPK"/>
@@ -100,12 +100,43 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-5">
+    <changeSet author="vijay (generated)" id="1473338222720-5">
+        <createTable tableName="company_detail">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="company_detaiPK"/>
+            </column>
+            <column name="version" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="company_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_created" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_updated" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="no_of_employee" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-6">
         <createTable tableName="contacts">
             <column autoIncrement="true" name="id" type="bigint">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="contactsPK"/>
             </column>
             <column name="version" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address_id" type="bigint">
                 <constraints nullable="false"/>
             </column>
             <column name="address_book_id" type="bigint">
@@ -122,7 +153,56 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-6">
+    <changeSet author="vijay (generated)" id="1473338222720-7">
+        <createTable tableName="customer">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="customerPK"/>
+            </column>
+            <column name="version" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_created" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_internal" type="bit">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_updated" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-8">
+        <createTable tableName="customer_address_book">
+            <column name="customer_address_books_id" type="bigint"/>
+            <column name="address_book_id" type="bigint"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-9">
+        <createTable tableName="customer_company_detail">
+            <column name="customer_company_detail_id" type="bigint"/>
+            <column name="company_detail_id" type="bigint"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-10">
+        <createTable tableName="customer_email">
+            <column name="customer_emails_id" type="bigint"/>
+            <column name="email_id" type="bigint"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-11">
+        <createTable tableName="customer_notification">
+            <column name="customer_notifications_id" type="bigint"/>
+            <column name="notification_id" type="bigint"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-12">
+        <createTable tableName="customer_personal_detail">
+            <column name="customer_personal_detail_id" type="bigint"/>
+            <column name="personal_detail_id" type="bigint"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-13">
         <createTable tableName="email">
             <column autoIncrement="true" name="id" type="bigint">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="emailPK"/>
@@ -159,7 +239,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-7">
+    <changeSet author="vijay (generated)" id="1473338222720-14">
         <createTable tableName="email_type">
             <column autoIncrement="true" name="id" type="bigint">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="email_typePK"/>
@@ -181,7 +261,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-8">
+    <changeSet author="vijay (generated)" id="1473338222720-15">
         <createTable tableName="letter">
             <column autoIncrement="true" name="id" type="bigint">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="letterPK"/>
@@ -214,7 +294,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-9">
+    <changeSet author="vijay (generated)" id="1473338222720-16">
         <createTable tableName="letter_post">
             <column autoIncrement="true" name="id" type="bigint">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="letter_postPK"/>
@@ -242,7 +322,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-10">
+    <changeSet author="vijay (generated)" id="1473338222720-17">
         <createTable tableName="notification">
             <column autoIncrement="true" name="id" type="bigint">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="notificationPK"/>
@@ -270,7 +350,83 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-11">
+    <changeSet author="vijay (generated)" id="1473338222720-18">
+        <createTable tableName="personal_detail">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="personal_detaPK"/>
+            </column>
+            <column name="version" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="contact_number" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_created" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_of_birth" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="first_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_updated" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="marital_status" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="middle_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone_context" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone_type" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-19">
+        <createTable tableName="response_data">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="response_dataPK"/>
+            </column>
+            <column name="version" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-20">
+        <createTable tableName="result">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="resultPK"/>
+            </column>
+            <column name="version" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="response_data_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="url" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="results_idx" type="integer"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-21">
         <createTable tableName="role">
             <column autoIncrement="true" name="id" type="bigint">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="rolePK"/>
@@ -283,7 +439,44 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-12">
+    <changeSet author="vijay (generated)" id="1473338222720-22">
+        <createTable tableName="social_profile">
+            <column autoIncrement="true" name="id" type="bigint">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="social_profilPK"/>
+            </column>
+            <column name="version" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="access_secret" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="access_token" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="alternate_email" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="customer_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="profile_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="profile_url" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-23">
         <createTable tableName="user">
             <column autoIncrement="true" name="id" type="bigint">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="userPK"/>
@@ -298,10 +491,14 @@
                 <constraints nullable="false"/>
             </column>
             <column name="admin_setting_id" type="bigint"/>
+            <column name="customer_id" type="bigint"/>
             <column name="enabled" type="bit">
                 <constraints nullable="false"/>
             </column>
             <column name="first_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="has_verified_email" type="bit">
                 <constraints nullable="false"/>
             </column>
             <column name="last_name" type="varchar(255)">
@@ -313,12 +510,16 @@
             <column name="password_expired" type="bit">
                 <constraints nullable="false"/>
             </column>
+            <column name="unique_token" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
             <column name="username" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
+            <column name="when_email_verified" type="datetime"/>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-13">
+    <changeSet author="vijay (generated)" id="1473338222720-24">
         <createTable tableName="user_role">
             <column name="user_id" type="bigint">
                 <constraints nullable="false"/>
@@ -328,131 +529,238 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-14">
+    <changeSet author="vijay (generated)" id="1473338222720-25">
         <addPrimaryKey columnNames="user_id, role_id" constraintName="user_rolePK" tableName="user_role"/>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-28">
-        <createIndex indexName="FK_7rod8a71yep5vxasb0ms3osbg" tableName="address">
-            <column name="user_id"/>
+    <changeSet author="vijay (generated)" id="1473338222720-53">
+        <createIndex indexName="FK_nydg76tqo86ue3m5wsoojho6b" tableName="address">
+            <column name="customer_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-29">
-        <createIndex indexName="FK_891kjfcuawa7kebtjg91sywf1" tableName="address">
-            <column name="contact_id"/>
-        </createIndex>
-    </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-30">
-        <createIndex indexName="contact_id_uniq_1472652882329" tableName="address" unique="true">
-            <column name="contact_id"/>
-        </createIndex>
-    </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-31">
+    <changeSet author="vijay (generated)" id="1473338222720-54">
         <createIndex indexName="FK_9q38p9juil31vn58ifjq0cdj0" tableName="address_book">
             <column name="user_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-32">
+    <changeSet author="vijay (generated)" id="1473338222720-55">
         <createIndex indexName="FK_2512b6p0n3qo05b5emxrw9p2i" tableName="attachments">
             <column name="email_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-33">
+    <changeSet author="vijay (generated)" id="1473338222720-56">
+        <createIndex indexName="FK_3i26jclhghprdnel2fydlqjil" tableName="company_detail">
+            <column name="address_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-57">
         <createIndex indexName="FK_cid1mcif92bemet4j2xoyk3oc" tableName="contacts">
             <column name="address_book_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-34">
+    <changeSet author="vijay (generated)" id="1473338222720-58">
+        <createIndex indexName="FK_n212qvf6geg7an12wpnlnekyk" tableName="contacts">
+            <column name="address_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-59">
+        <createIndex indexName="FK_h7jjihr8m8qu2vbcexglhkoi2" tableName="customer_address_book">
+            <column name="address_book_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-60">
+        <createIndex indexName="FK_i5omsjbefdwiy4gf6kl5k82oc" tableName="customer_address_book">
+            <column name="customer_address_books_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-61">
+        <createIndex indexName="FK_19bqxjtofn3qdf4j2t5pvwjmp" tableName="customer_company_detail">
+            <column name="customer_company_detail_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-62">
+        <createIndex indexName="FK_q920x35wkjbuk3m4bblaidahw" tableName="customer_company_detail">
+            <column name="company_detail_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-63">
+        <createIndex indexName="FK_ksw1drmyoadepkcf1nwki6suc" tableName="customer_email">
+            <column name="email_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-64">
+        <createIndex indexName="FK_l564q2d11h4bif640jq7489q6" tableName="customer_email">
+            <column name="customer_emails_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-65">
+        <createIndex indexName="FK_4vs74nx002p2q8tyos1jc2kdw" tableName="customer_notification">
+            <column name="notification_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-66">
+        <createIndex indexName="FK_jkyq4jrh1oe020siunvbtpven" tableName="customer_notification">
+            <column name="customer_notifications_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-67">
+        <createIndex indexName="FK_8lfckr3r3hhyokjs5hdltntwc" tableName="customer_personal_detail">
+            <column name="personal_detail_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-68">
+        <createIndex indexName="FK_mlim7hljbdaubp1tbw0pu4tmv" tableName="customer_personal_detail">
+            <column name="customer_personal_detail_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-69">
         <createIndex indexName="FK_pd9p1i2b3xvks7pyenbnfnsir" tableName="email">
             <column name="email_type_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-35">
+    <changeSet author="vijay (generated)" id="1473338222720-70">
         <createIndex indexName="FK_qcesbut8qtn9jih0mrh93qxj6" tableName="email">
             <column name="user_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-36">
+    <changeSet author="vijay (generated)" id="1473338222720-71">
         <createIndex indexName="FK_f66v8q1w8y5e56pm4xtbnvvc6" tableName="letter">
             <column name="email_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-37">
+    <changeSet author="vijay (generated)" id="1473338222720-72">
         <createIndex indexName="FK_cvf4ddgked6c6vq787kvqygqj" tableName="letter_post">
             <column name="letter_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-38">
-        <createIndex indexName="letter_id_uniq_1472652882370" tableName="letter_post" unique="true">
+    <changeSet author="vijay (generated)" id="1473338222720-73">
+        <createIndex indexName="letter_id_uniq_1473338222640" tableName="letter_post" unique="true">
             <column name="letter_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-39">
+    <changeSet author="vijay (generated)" id="1473338222720-74">
         <createIndex indexName="FK_1urdwwsh2ti15ta6f6p5dbdcp" tableName="notification">
             <column name="user_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-40">
-        <createIndex indexName="authority_uniq_1472652882375" tableName="role" unique="true">
+    <changeSet author="vijay (generated)" id="1473338222720-75">
+        <createIndex indexName="FK_p7y51qad5r90sr0wkbsj2ox2u" tableName="result">
+            <column name="response_data_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-76">
+        <createIndex indexName="authority_uniq_1473338222652" tableName="role" unique="true">
             <column name="authority"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-41">
+    <changeSet author="vijay (generated)" id="1473338222720-77">
+        <createIndex indexName="FK_jit9g4f8m9hb45g6nm6uifx8i" tableName="social_profile">
+            <column name="customer_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-78">
+        <createIndex indexName="FK_bv23tjhe3c029w3d3x0435imy" tableName="user">
+            <column name="customer_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-79">
         <createIndex indexName="FK_nsybal38vwu6xbg07me2639ac" tableName="user">
             <column name="admin_setting_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-42">
-        <createIndex indexName="username_uniq_1472652882379" tableName="user" unique="true">
+    <changeSet author="vijay (generated)" id="1473338222720-80">
+        <createIndex indexName="username_uniq_1473338222659" tableName="user" unique="true">
             <column name="username"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-43">
+    <changeSet author="vijay (generated)" id="1473338222720-81">
         <createIndex indexName="FK_apcc8lxk2xnug8377fatvbn04" tableName="user_role">
             <column name="user_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-44">
+    <changeSet author="vijay (generated)" id="1473338222720-82">
         <createIndex indexName="FK_it77eq964jhfqtu54081ebtio" tableName="user_role">
             <column name="role_id"/>
         </createIndex>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-15">
-        <addForeignKeyConstraint baseColumnNames="contact_id" baseTableName="address" constraintName="FK_891kjfcuawa7kebtjg91sywf1" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="contacts" referencesUniqueColumn="false"/>
+    <changeSet author="vijay (generated)" id="1473338222720-26">
+        <addForeignKeyConstraint baseColumnNames="customer_id" baseTableName="address" constraintName="FK_nydg76tqo86ue3m5wsoojho6b" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="customer" referencesUniqueColumn="false"/>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-16">
-        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="address" constraintName="FK_7rod8a71yep5vxasb0ms3osbg" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="user" referencesUniqueColumn="false"/>
-    </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-17">
+    <changeSet author="vijay (generated)" id="1473338222720-27">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="address_book" constraintName="FK_9q38p9juil31vn58ifjq0cdj0" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="user" referencesUniqueColumn="false"/>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-18">
+    <changeSet author="vijay (generated)" id="1473338222720-28">
         <addForeignKeyConstraint baseColumnNames="email_id" baseTableName="attachments" constraintName="FK_2512b6p0n3qo05b5emxrw9p2i" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="email" referencesUniqueColumn="false"/>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-19">
+    <changeSet author="vijay (generated)" id="1473338222720-29">
+        <addForeignKeyConstraint baseColumnNames="address_id" baseTableName="company_detail" constraintName="FK_3i26jclhghprdnel2fydlqjil" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="address" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-30">
         <addForeignKeyConstraint baseColumnNames="address_book_id" baseTableName="contacts" constraintName="FK_cid1mcif92bemet4j2xoyk3oc" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="address_book" referencesUniqueColumn="false"/>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-20">
+    <changeSet author="vijay (generated)" id="1473338222720-31">
+        <addForeignKeyConstraint baseColumnNames="address_id" baseTableName="contacts" constraintName="FK_n212qvf6geg7an12wpnlnekyk" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="address" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-32">
+        <addForeignKeyConstraint baseColumnNames="address_book_id" baseTableName="customer_address_book" constraintName="FK_h7jjihr8m8qu2vbcexglhkoi2" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="address_book" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-33">
+        <addForeignKeyConstraint baseColumnNames="customer_address_books_id" baseTableName="customer_address_book" constraintName="FK_i5omsjbefdwiy4gf6kl5k82oc" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="customer" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-34">
+        <addForeignKeyConstraint baseColumnNames="company_detail_id" baseTableName="customer_company_detail" constraintName="FK_q920x35wkjbuk3m4bblaidahw" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="company_detail" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-35">
+        <addForeignKeyConstraint baseColumnNames="customer_company_detail_id" baseTableName="customer_company_detail" constraintName="FK_19bqxjtofn3qdf4j2t5pvwjmp" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="customer" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-36">
+        <addForeignKeyConstraint baseColumnNames="customer_emails_id" baseTableName="customer_email" constraintName="FK_l564q2d11h4bif640jq7489q6" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="customer" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-37">
+        <addForeignKeyConstraint baseColumnNames="email_id" baseTableName="customer_email" constraintName="FK_ksw1drmyoadepkcf1nwki6suc" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="email" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-38">
+        <addForeignKeyConstraint baseColumnNames="customer_notifications_id" baseTableName="customer_notification" constraintName="FK_jkyq4jrh1oe020siunvbtpven" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="customer" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-39">
+        <addForeignKeyConstraint baseColumnNames="notification_id" baseTableName="customer_notification" constraintName="FK_4vs74nx002p2q8tyos1jc2kdw" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="notification" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-40">
+        <addForeignKeyConstraint baseColumnNames="customer_personal_detail_id" baseTableName="customer_personal_detail" constraintName="FK_mlim7hljbdaubp1tbw0pu4tmv" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="customer" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-41">
+        <addForeignKeyConstraint baseColumnNames="personal_detail_id" baseTableName="customer_personal_detail" constraintName="FK_8lfckr3r3hhyokjs5hdltntwc" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="personal_detail" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-42">
         <addForeignKeyConstraint baseColumnNames="email_type_id" baseTableName="email" constraintName="FK_pd9p1i2b3xvks7pyenbnfnsir" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="email_type" referencesUniqueColumn="false"/>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-21">
+    <changeSet author="vijay (generated)" id="1473338222720-43">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="email" constraintName="FK_qcesbut8qtn9jih0mrh93qxj6" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="user" referencesUniqueColumn="false"/>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-22">
+    <changeSet author="vijay (generated)" id="1473338222720-44">
         <addForeignKeyConstraint baseColumnNames="email_id" baseTableName="letter" constraintName="FK_f66v8q1w8y5e56pm4xtbnvvc6" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="email" referencesUniqueColumn="false"/>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-23">
+    <changeSet author="vijay (generated)" id="1473338222720-45">
         <addForeignKeyConstraint baseColumnNames="letter_id" baseTableName="letter_post" constraintName="FK_cvf4ddgked6c6vq787kvqygqj" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="letter" referencesUniqueColumn="false"/>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-24">
+    <changeSet author="vijay (generated)" id="1473338222720-46">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="notification" constraintName="FK_1urdwwsh2ti15ta6f6p5dbdcp" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="user" referencesUniqueColumn="false"/>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-25">
+    <changeSet author="vijay (generated)" id="1473338222720-47">
+        <addForeignKeyConstraint baseColumnNames="response_data_id" baseTableName="result" constraintName="FK_p7y51qad5r90sr0wkbsj2ox2u" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="response_data" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-48">
+        <addForeignKeyConstraint baseColumnNames="customer_id" baseTableName="social_profile" constraintName="FK_jit9g4f8m9hb45g6nm6uifx8i" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="customer" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-49">
         <addForeignKeyConstraint baseColumnNames="admin_setting_id" baseTableName="user" constraintName="FK_nsybal38vwu6xbg07me2639ac" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="admin_setting" referencesUniqueColumn="false"/>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-26">
+    <changeSet author="vijay (generated)" id="1473338222720-50">
+        <addForeignKeyConstraint baseColumnNames="customer_id" baseTableName="user" constraintName="FK_bv23tjhe3c029w3d3x0435imy" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="customer" referencesUniqueColumn="false"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473338222720-51">
         <addForeignKeyConstraint baseColumnNames="role_id" baseTableName="user_role" constraintName="FK_it77eq964jhfqtu54081ebtio" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="role" referencesUniqueColumn="false"/>
     </changeSet>
-    <changeSet author="vijay (generated)" id="1472652882475-27">
+    <changeSet author="vijay (generated)" id="1473338222720-52">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="user_role" constraintName="FK_apcc8lxk2xnug8377fatvbn04" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="user" referencesUniqueColumn="false"/>
     </changeSet>
 </databaseChangeLog>

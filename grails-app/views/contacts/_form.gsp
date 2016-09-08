@@ -7,7 +7,7 @@
         <g:message code="contacts.address.label" default="Address"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:select id="address" name="address.id" from="${com.mailToPost.Address.list()}" optionKey="id" required=""
+    <g:select id="address" name="address.id" from="${com.mailToPost.customer.Address.list()}" optionKey="id" required=""
               value="${contactsInstance?.address?.id}" class="many-to-one"/>
 
 </div>

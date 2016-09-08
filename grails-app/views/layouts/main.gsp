@@ -13,6 +13,14 @@
     <link href="${resource(dir: 'css/public', file: 'owl.theme.default.min.css')}" rel="stylesheet">
     <link href="${resource(dir: 'css/public', file: 'animate.css')}" rel="stylesheet">
     <link href="${resource(dir: 'css/public', file: 'style.css')}" rel="stylesheet">
+    <script src="${resource(dir: 'js/public', file: 'jQuery-2.1.4.min.js')}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="${resource(dir: 'js/public', file: 'bootstrap.min.js')}"></script>
+    <script src="${resource(dir: 'js/public', file: 'owl.carousel.min.js')}"></script>
+    <script src="${resource(dir: 'js/public', file: 'cbpAnimatedHeader.js')}"></script>
+    <script src="${resource(dir: 'js/public', file: 'jquery.appear.js')}"></script>
+    <script src="${resource(dir: 'js/public', file: 'SmoothScroll.min.js')}"></script>
+    <script src="${resource(dir: 'js/public', file: 'theme-scripts.js')}"></script>
     <g:layoutHead/>
 </head>
 
@@ -74,13 +82,5 @@
         $("#login-overlay").modal("toggle");
     }
 </script>
-<script src="${resource(dir: 'js/public', file: 'jQuery-2.1.4.min.js')}"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="${resource(dir: 'js/public', file: 'bootstrap.min.js')}"></script>
-<script src="${resource(dir: 'js/public', file: 'owl.carousel.min.js')}"></script>
-<script src="${resource(dir: 'js/public', file: 'cbpAnimatedHeader.js')}"></script>
-<script src="${resource(dir: 'js/public', file: 'jquery.appear.js')}"></script>
-<script src="${resource(dir: 'js/public', file: 'SmoothScroll.min.js')}"></script>
-<script src="${resource(dir: 'js/public', file: 'theme-scripts.js')}"></script>
 </body>
 </html>

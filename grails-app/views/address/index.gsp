@@ -1,4 +1,4 @@
-<%@ page import="com.mailToPost.Address" %>
+<%@ page import="com.mailToPost.customer.Address" %>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,5 +1,3 @@
-import com.springSecurity.User
-
 class BootStrap {
     def bootstrapService
 
