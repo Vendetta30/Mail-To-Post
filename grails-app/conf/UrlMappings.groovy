@@ -14,6 +14,7 @@ class UrlMappings {
         "/adminSetting"(controller: 'admin', action: 'setting')
         "/adminEmail"(controller: 'email', action: 'index')
         "/adminDashboard"(controller: 'admin', action: 'index')
+        "/register"(controller: 'registerUser', action: 'createUser')
 
         //================Rest API===============
 

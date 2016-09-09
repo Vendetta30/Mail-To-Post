@@ -1,11 +1,6 @@
 package com.springSecurity
 
-import com.mailToPost.customer.Address
-import com.mailToPost.AddressBook
 import com.mailToPost.AdminSetting
-import com.mailToPost.Email
-import com.mailToPost.Notification
-import co.RegisterCO
 import com.mailToPost.customer.Customer
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
@@ -36,13 +31,6 @@ class User implements Serializable {
         this()
         this.username = username
         this.password = password
-    }
-
-    User(RegisterCO registerCO) {
-        this.username = registerCO.username
-        this.password = registerCO.password
-        this.firstName = registerCO.firstName
-        this.lastName = registerCO.lastName
     }
 
     Set<Role> getAuthorities() {

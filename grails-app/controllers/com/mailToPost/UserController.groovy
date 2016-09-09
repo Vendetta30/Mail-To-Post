@@ -22,7 +22,7 @@ class UserController {
         if (!user) {
 
             if (userCO.validate()) {
-                User userToBeSaved = bindingService.bindingUserCoToUser(userCO)
+                User userToBeSaved = null
                 AppUtil.save(userToBeSaved)
                 Role userRole = Role.findByAuthority("ROLE_USER")
                 UserRole.create(userToBeSaved, userRole, true)

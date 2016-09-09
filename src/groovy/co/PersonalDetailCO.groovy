@@ -1,22 +1,19 @@
-package com.mailToPost.customer
+package co
 
 import enums.MaritalStatus
-import enums.ObjectState
 import enums.PhoneContext
 import enums.PhoneType
 import enums.Title
+import grails.validation.Validateable
 
-class PersonalDetail {
-
+@Validateable
+class PersonalDetailCO {
     Title title
     Date dateOfBirth
     String contactNumber
     PhoneType phoneType
     PhoneContext phoneContext
     MaritalStatus maritalStatus
-    ObjectState state = ObjectState.RECENT
-    Date dateCreated
-    Date lastUpdated
 
     static constraints = {
         title nullable: false

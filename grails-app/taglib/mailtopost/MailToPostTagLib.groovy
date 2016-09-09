@@ -1,9 +1,20 @@
 package mailtopost
 
 class MailToPostTagLib {
-    static defaultEncodeAs = [taglib: 'html']
     //static encodeAsForTags = [tagName: [taglib:'html'], otherTagName: [taglib:'none']]
     static namespace = "mtp"
+
+    def adminNavigation = {
+
+    }
+
+    def userNavigation = {
+
+    }
+
+    def publicNavigation = {
+        out << g.render(template: '/layouts/publicNavigation')
+    }
 
     def showTextProperly = { attrs, body ->
         int maxSize = attrs.max as int

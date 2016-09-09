@@ -11,8 +11,6 @@ class LetterCO {
     String letterHeader
     String letterFooter
     LetterDeliveryStatus status
-    Date dateCreated
-    Date lastUpdated
 
     static constraints = {
         letterHeader(nullable: true, blank: true)

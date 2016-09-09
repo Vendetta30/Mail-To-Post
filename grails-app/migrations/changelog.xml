@@ -763,4 +763,14 @@
     <changeSet author="vijay (generated)" id="1473338222720-52">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="user_role" constraintName="FK_apcc8lxk2xnug8377fatvbn04" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="user" referencesUniqueColumn="false"/>
     </changeSet>
+    <changeSet author="vijay (generated)" id="1473350587590-1">
+        <dropColumn columnName="first_name" tableName="personal_detail"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473350587590-2">
+        <dropColumn columnName="last_name" tableName="personal_detail"/>
+    </changeSet>
+    <changeSet author="vijay (generated)" id="1473350587590-3">
+        <dropColumn columnName="middle_name" tableName="personal_detail"/>
+    </changeSet>
+
 </databaseChangeLog>
