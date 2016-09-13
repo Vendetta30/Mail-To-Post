@@ -9,44 +9,47 @@
 
             <div class="col-md-8">
                 <div class="form-group">
-                    <label for="username" class="col-sm-2 control-label">Username</label>
+                    <label for="username" class="col-sm-3 control-label"><g:message
+                            code="springSecurity.login.username.label"/></label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-6">
                         <input type="email" class="form-control" value="${userCO?.username}" id="username"
                                placeholder="Email">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="firstName" class="col-sm-2 control-label">First Name</label>
+                    <label for="firstName" class="col-sm-3 control-label"><g:message code="user.firstname"/></label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-6">
                         <input type="text" class="form-control" id="firstName" value="${userCO?.firstName}"
                                placeholder="First Name">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+                    <label for="lastName" class="col-sm-3 control-label"><g:message code="user.lastname"/></label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-6">
                         <input type="text" class="form-control" id="lastName" value="${userCO?.lastName}"
                                placeholder="Last Name">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="password" class="col-sm-2 control-label">Password</label>
+                    <label for="password" class="col-sm-3 control-label"><g:message
+                            code="springSecurity.login.password.label"/></label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-6">
                         <input type="password" class="form-control" id="password" placeholder="Password">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="confirmPassword" class="col-sm-2 control-label">Confirm Password</label>
+                    <label for="confirmPassword" class="col-sm-3 control-label"><g:message
+                            code="password.confirm"/></label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-6">
                         <input type="password" class="form-control" id="confirmPassword"
                                placeholder="Re-enter your password">
                     </div>
