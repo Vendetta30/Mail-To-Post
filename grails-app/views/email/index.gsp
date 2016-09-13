@@ -26,9 +26,16 @@
                         <g:render template="boxTypeTemplate"/>
                         <hr/>
                     </div>
+                    <g:render template="emailHandler"/>
+                    <div class="col-sm-9 col-md-10">
+                        <div class="mtl mbl"></div>
 
-                    <div class="col-sm-9 col-md-10" id="home">
-                        <g:render template="emailTemplate"/>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="home">
+                                <g:render template="emailTemplate"/>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
