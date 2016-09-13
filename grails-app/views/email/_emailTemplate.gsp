@@ -30,15 +30,8 @@
 </div>
 
 <div class="pull-right">
-    <span class="text-muted"><b>1</b>&nbsp; – &nbsp;<b>50</b>&nbsp; of &nbsp;<b>277</b></span>
-
-    <div class="btn-group mlm">
-        <button type="button" class="btn btn-default"><span class="fa fa-chevron-left"></span>
-        </button>
-        <button type="button" class="btn btn-default"><span class="fa fa-chevron-right"></span>
-        </button>
-    </div>
-    <util:remotePaginate total="${emailInstanceTotal}" update="home" controller="email" action="filter"/>
+    <util:remotePaginate total="${emailInstanceTotal}" update="home" controller="email" action="filter" max="20"
+                         pageSizes="[10: '10 Per Page', 20: '20 Per Page', 50: '50 Per Page', 100: '100 Per Page']"/>
 </div>
 
 <div class="mtl mbl"></div>
